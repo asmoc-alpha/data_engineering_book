@@ -1,4 +1,4 @@
-# 第39章：图文数据工程
+# 第39章：图文工程：过滤与 DataComp
 
 <div class="chapter-authors">穆冠霖（Guanlin Mu）；曹旭宏（Xuhong Cao）</div>
 

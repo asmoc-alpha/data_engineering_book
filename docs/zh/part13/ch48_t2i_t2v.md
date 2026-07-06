@@ -1,4 +1,4 @@
-# 第48章：多模态生成数据工程
+# 第48章：生成式数据管线：FLUX 与 Wan
 
 <div class="chapter-authors">张然（Ran Zhang）；Jianqing Sun；于璠</div>
 

@@ -14,12 +14,12 @@ Throughout this part, "specialized dataset" consistently refers to data assets c
 
 ## Table of Contents for This Part
 
-- [Chapter 38: Text Corpus Data Engineering](ch38_text_corpora_transparent_ledger.md)
-- [Chapter 39: Image-Text Data Engineering](ch39_image_text_candidate_pool_data_engineering.md)
-- [Chapter 40: Visual Document and Table Data Engineering](ch40_visual_document_table_data_engineering.md)
-- [Chapter 41: Visual Reasoning Data Engineering](ch41_visual_reasoning_tool_data_engineering.md)
-- [Chapter 42: Speech and Audio Data Engineering](ch42_speech_audio_interaction_data_engineering.md)
-- [Chapter 43: Reasoning Trace Data Engineering](ch43_reasoning_trace_compression_data_engineering.md)
+- [Chapter 38: Text Corpus Engineering: Web and Ledgers](ch38_text_corpora_transparent_ledger.md)
+- [Chapter 39: Image-Text Engineering: Filtering and DataComp](ch39_image_text_candidate_pool_data_engineering.md)
+- [Chapter 40: Document Table Engineering: Sparse Tables](ch40_visual_document_table_data_engineering.md)
+- [Chapter 41: Visual Reasoning Engineering: Charts and Tools](ch41_visual_reasoning_tool_data_engineering.md)
+- [Chapter 42: Speech Data Engineering: Control and Safety](ch42_speech_audio_interaction_data_engineering.md)
+- [Chapter 43: Reasoning Trace Engineering: Compression and Masks](ch43_reasoning_trace_compression_data_engineering.md)
 
 ## Reading Order
 

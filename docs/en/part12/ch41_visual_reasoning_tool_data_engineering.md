@@ -1,4 +1,4 @@
-# Chapter 41: Visual Reasoning Data Engineering
+# Chapter 41: Visual Reasoning Engineering: Charts and Tools
 
 <div class="chapter-authors">Lin Xu; Xinyu Chen</div>
 

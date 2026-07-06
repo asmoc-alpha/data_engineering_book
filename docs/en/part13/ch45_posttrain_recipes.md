@@ -1,4 +1,4 @@
-# Chapter 45: LLM Post-Training Data Engineering
+# Chapter 45: LLM Post-Training Recipes: SFT and Preferences
 
 <div class="chapter-authors">Cong Wang; Xin Xu; Wei Huang</div>
 

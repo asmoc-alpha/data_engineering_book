@@ -1,4 +1,4 @@
-# Chapter 46: Reasoning Models and Reinforcement Learning Data
+# Chapter 46: Reasoning Data Flywheels: R1 and QwQ
 
 <div class="chapter-authors">Xin Xu; Shengping Liu; Fan Yu</div>
 

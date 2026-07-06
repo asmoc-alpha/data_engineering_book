@@ -14,11 +14,11 @@
 
 ## 本篇目录
 
-- [第44章：LLM 预训练数据工程](ch44_pretrain_recipes.md)
-- [第45章：LLM 后训练数据工程](ch45_posttrain_recipes.md)
-- [第46章：推理模型与强化学习数据工程](ch46_rl_reasoning_data.md)
-- [第47章：视觉语言模型数据配方](ch47_vlm_data_recipes.md)
-- [第48章：多模态生成数据工程](ch48_t2i_t2v.md)
+- [第44章：LLM 预训练配方：DeepSeek 与 Qwen](ch44_pretrain_recipes.md)
+- [第45章：LLM 后训练配方：SFT 与偏好](ch45_posttrain_recipes.md)
+- [第46章：推理数据飞轮：R1 与 QwQ](ch46_rl_reasoning_data.md)
+- [第47章：视觉语言配方：Qwen-VL 与 InternVL](ch47_vlm_data_recipes.md)
+- [第48章：生成式数据管线：FLUX 与 Wan](ch48_t2i_t2v.md)
 
 ## 配方范式
 

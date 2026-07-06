@@ -1,4 +1,4 @@
-# Chapter 47: Vision-Language Data Recipes
+# Chapter 47: Vision-Language Recipes: Qwen-VL and InternVL
 
 <div class="chapter-authors">Xuhong Cao; Ke Wang; Qingsong Liu</div>
 
@@ -334,7 +334,7 @@ Three case studies (§47.6) provide three different entry pathways: "full open-s
 
 Seven implementation risks (§47.7) reveal engineering details that technical reports generally avoid, with the "applicability boundaries" section in particular reminding readers: **the most complex recipe is not necessarily the most suitable one—always prioritize business scenarios and team resource constraints above all else**.
 
-Once VLMs have mastered the "visual understanding" capability for both the physical world and two-dimensional surfaces through the high-standard data recipes described in this chapter, they also acquire the foundation for processing visual inputs and driving downstream generative tasks. In the next chapter, **Ch48: Multimodal Generative Data Engineering**, we shift perspective toward generative tasks, discussing how data recipes will evolve as models transition from "observers" to generators of pixels and video.
+Once VLMs have mastered the "visual understanding" capability for both the physical world and two-dimensional surfaces through the high-standard data recipes described in this chapter, they also acquire the foundation for processing visual inputs and driving downstream generative tasks. In the next chapter, **Ch48: Generative Data Pipelines: FLUX and Wan**, we shift perspective toward generative tasks, discussing how data recipes will evolve as models transition from "observers" to generators of pixels and video.
 
 ## References
 

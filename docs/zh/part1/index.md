@@ -42,7 +42,7 @@
 
 ## 本篇目录
 
-- [第1章 大模型时代的数据变革](ch01_data_change.md)
+- [第1章：大语言模型时代的数据革命](ch01_data_change.md)
 - [第2章：LLM数据生命周期与质量评估框架](ch02_quality_framework.md)
 - [第3章 AI原生数据栈与成本治理](ch03_data_stack.md)
 

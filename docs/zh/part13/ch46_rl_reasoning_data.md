@@ -1,4 +1,4 @@
-# 第46章：推理模型与强化学习数据工程
+# 第46章：推理数据飞轮：R1 与 QwQ
 
 <div class="chapter-authors">徐鑫（Xin Xu）；Shengping Liu；于璠</div>
 

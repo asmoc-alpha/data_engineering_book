@@ -1,4 +1,4 @@
-# Chapter 43: Reasoning Trace Data Engineering
+# Chapter 43: Reasoning Trace Engineering: Compression and Masks
 
 <div class="chapter-authors">Xuan Li; Fengxin Chen</div>
 

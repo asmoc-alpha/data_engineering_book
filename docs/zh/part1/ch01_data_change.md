@@ -1,4 +1,4 @@
-# 第1章 大模型时代的数据变革
+# 第1章：大语言模型时代的数据革命
 
 <div class="chapter-authors">於俊（Jun Yu）；陈长汶；王柯（Ke Wang）</div>
 

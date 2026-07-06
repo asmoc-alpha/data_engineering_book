@@ -43,7 +43,7 @@ The current Chinese mainline uses the 2026 Springer-size publication structure. 
 This part establishes the core framework for large-model data engineering: how the data lifecycle, quality evaluation, AI-native data stack, and cost governance fit together.
 
 - [Part Contents](part1/index.md)
-- [Chapter 1: The Data Revolution in the Era of Large Language Models](part1/ch01_data_change.md)
+- [Chapter 1: Data Revolution for Large Language Models](part1/ch01_data_change.md)
 - [Chapter 2: LLM Data Lifecycle and Quality Assessment Framework](part1/ch02_quality_framework.md)
 - [Chapter 3: AI-Native Data Stack and Cost Governance](part1/ch03_data_stack.md)
 
@@ -146,23 +146,23 @@ This part focuses on compliance frameworks, privacy protection, federated learni
 Part XII follows a modality-explicit path across text corpora, image-text candidate pools, visual documents and tables, visual reasoning, speech and audio, and reasoning traces. It explains how specialized datasets are defined, constructed, evaluated, released, governed, and reproduced, while connecting project case studies with open-source model data recipes.
 
 - [Part Contents](part12/index.md)
-- [Chapter 38: Text Corpus Data Engineering](part12/ch38_text_corpora_transparent_ledger.md)
-- [Chapter 39: Image-Text Data Engineering](part12/ch39_image_text_candidate_pool_data_engineering.md)
-- [Chapter 40: Visual Document and Table Data Engineering](part12/ch40_visual_document_table_data_engineering.md)
-- [Chapter 41: Visual Reasoning Data Engineering](part12/ch41_visual_reasoning_tool_data_engineering.md)
-- [Chapter 42: Speech and Audio Data Engineering](part12/ch42_speech_audio_interaction_data_engineering.md)
-- [Chapter 43: Reasoning Trace Data Engineering](part12/ch43_reasoning_trace_compression_data_engineering.md)
+- [Chapter 38: Text Corpus Engineering: Web and Ledgers](part12/ch38_text_corpora_transparent_ledger.md)
+- [Chapter 39: Image-Text Engineering: Filtering and DataComp](part12/ch39_image_text_candidate_pool_data_engineering.md)
+- [Chapter 40: Document Table Engineering: Sparse Tables](part12/ch40_visual_document_table_data_engineering.md)
+- [Chapter 41: Visual Reasoning Engineering: Charts and Tools](part12/ch41_visual_reasoning_tool_data_engineering.md)
+- [Chapter 42: Speech Data Engineering: Control and Safety](part12/ch42_speech_audio_interaction_data_engineering.md)
+- [Chapter 43: Reasoning Trace Engineering: Compression and Masks](part12/ch43_reasoning_trace_compression_data_engineering.md)
 
 ## Part XIII: Open-source LLM Data Engineering Recipes and Paradigms
 
 This part focuses on data recipes, training paradigms, and engineering organization for open-source large models, covering pre-training, post-training, reasoning RL, VLMs, and T2I/T2V generation.
 
 - [Part Contents](part13/index.md)
-- [Chapter 44: LLM Pre-Training Data Engineering](part13/ch44_pretrain_recipes.md)
-- [Chapter 45: LLM Post-Training Data Engineering](part13/ch45_posttrain_recipes.md)
-- [Chapter 46: Reasoning Models and Reinforcement Learning Data](part13/ch46_rl_reasoning_data.md)
-- [Chapter 47: Vision-Language Data Recipes](part13/ch47_vlm_data_recipes.md)
-- [Chapter 48: Multimodal Generative Data Engineering](part13/ch48_t2i_t2v.md)
+- [Chapter 44: LLM Pre-Training Recipes: DeepSeek and Qwen](part13/ch44_pretrain_recipes.md)
+- [Chapter 45: LLM Post-Training Recipes: SFT and Preferences](part13/ch45_posttrain_recipes.md)
+- [Chapter 46: Reasoning Data Flywheels: R1 and QwQ](part13/ch46_rl_reasoning_data.md)
+- [Chapter 47: Vision-Language Recipes: Qwen-VL and InternVL](part13/ch47_vlm_data_recipes.md)
+- [Chapter 48: Generative Data Pipelines: FLUX and Wan](part13/ch48_t2i_t2v.md)
 
 ## Part XIV: Practical Projects
 

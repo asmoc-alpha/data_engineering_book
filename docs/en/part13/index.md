@@ -14,11 +14,11 @@ Throughout this part, "data recipe" is used consistently to describe the combina
 
 ## Table of Contents for This Part
 
-- [Chapter 44: LLM Pre-Training Data Engineering](ch44_pretrain_recipes.md)
-- [Chapter 45: LLM Post-Training Data Engineering](ch45_posttrain_recipes.md)
-- [Chapter 46: Reasoning Models and Reinforcement Learning Data](ch46_rl_reasoning_data.md)
-- [Chapter 47: Vision-Language Data Recipes](ch47_vlm_data_recipes.md)
-- [Chapter 48: Multimodal Generative Data Engineering](ch48_t2i_t2v.md)
+- [Chapter 44: LLM Pre-Training Recipes: DeepSeek and Qwen](ch44_pretrain_recipes.md)
+- [Chapter 45: LLM Post-Training Recipes: SFT and Preferences](ch45_posttrain_recipes.md)
+- [Chapter 46: Reasoning Data Flywheels: R1 and QwQ](ch46_rl_reasoning_data.md)
+- [Chapter 47: Vision-Language Recipes: Qwen-VL and InternVL](ch47_vlm_data_recipes.md)
+- [Chapter 48: Generative Data Pipelines: FLUX and Wan](ch48_t2i_t2v.md)
 
 ## Recipe Paradigms
 

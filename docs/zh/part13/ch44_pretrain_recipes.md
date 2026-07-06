@@ -1,4 +1,4 @@
-# 第44章：LLM 预训练数据工程
+# 第44章：LLM 预训练配方：DeepSeek 与 Qwen
 
 <div class="chapter-authors">王柯（Ke Wang）；Jiaen Liang；於俊（Jun Yu）</div>
 

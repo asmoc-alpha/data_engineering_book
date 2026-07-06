@@ -1,4 +1,4 @@
-# Chapter 40: Visual Document and Table Data Engineering
+# Chapter 40: Document Table Engineering: Sparse Tables
 
 <div class="chapter-authors">Guanjun Liu; Yuefeng Zou</div>
 

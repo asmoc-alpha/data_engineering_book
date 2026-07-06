@@ -1,4 +1,4 @@
-# 第47章：视觉语言模型数据配方
+# 第47章：视觉语言配方：Qwen-VL 与 InternVL
 
 <div class="chapter-authors">曹旭宏（Xuhong Cao）；王柯（Ke Wang）；Qingsong Liu</div>
 

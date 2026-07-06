@@ -1,4 +1,4 @@
-# 第40章：视觉文档与表格数据工程
+# 第40章：文档表格工程：稀疏表格
 
 <div class="chapter-authors">刘冠君（Guanjun Liu）；邹月峰（Yuefeng Zou）</div>
 

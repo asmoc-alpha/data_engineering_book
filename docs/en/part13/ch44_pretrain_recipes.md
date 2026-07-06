@@ -1,4 +1,4 @@
-# Chapter 44: LLM Pre-Training Data Engineering
+# Chapter 44: LLM Pre-Training Recipes: DeepSeek and Qwen
 
 <div class="chapter-authors">Ke Wang; Jiaen Liang; Jun Yu</div>
 

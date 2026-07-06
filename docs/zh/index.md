@@ -35,7 +35,7 @@
 建立大模型数据工程的核心认知，说明数据生命周期、质量评估、平台栈和成本治理的基本框架。
 
 - [本篇目录](part1/index.md)
-- [第1章 大模型时代的数据变革](part1/ch01_data_change.md)
+- [第1章：大语言模型时代的数据革命](part1/ch01_data_change.md)
 - [第2章：LLM数据生命周期与质量评估框架](part1/ch02_quality_framework.md)
 - [第3章 AI原生数据栈与成本治理](part1/ch03_data_stack.md)
 
@@ -138,23 +138,23 @@
 第十二篇以文本语料、图文候选池、视觉文档与表格、视觉推理、语音音频和推理轨迹为主线，讨论专项数据集如何被定义、构建、评测、发布和复现。各章围绕任务定义、样本 schema、构建流水线、质量控制、评测协议和合规风险展开，并向后连接项目案例研究与开源模型数据配方。
 
 - [本篇目录](part12/index.md)
-- [第38章：文本语料数据工程](part12/ch38_text_corpora_transparent_ledger.md)
-- [第39章：图文数据工程](part12/ch39_image_text_candidate_pool_data_engineering.md)
-- [第40章：视觉文档与表格数据工程](part12/ch40_visual_document_table_data_engineering.md)
-- [第41章：视觉推理数据工程](part12/ch41_visual_reasoning_tool_data_engineering.md)
-- [第42章：语音与音频数据工程](part12/ch42_speech_audio_interaction_data_engineering.md)
-- [第43章：推理轨迹数据工程](part12/ch43_reasoning_trace_compression_data_engineering.md)
+- [第38章：文本语料工程：Web 与溯源账本](part12/ch38_text_corpora_transparent_ledger.md)
+- [第39章：图文工程：过滤与 DataComp](part12/ch39_image_text_candidate_pool_data_engineering.md)
+- [第40章：文档表格工程：稀疏表格](part12/ch40_visual_document_table_data_engineering.md)
+- [第41章：视觉推理工程：图表与工具](part12/ch41_visual_reasoning_tool_data_engineering.md)
+- [第42章：语音数据工程：控制与安全](part12/ch42_speech_audio_interaction_data_engineering.md)
+- [第43章：推理轨迹工程：压缩与掩码](part12/ch43_reasoning_trace_compression_data_engineering.md)
 
 ## 第十三篇：开源大模型数据工程配方与范式
 
 第十三篇聚焦开源大模型的数据配方、训练范式与工程化组织方式，覆盖预训练、后训练、推理强化学习、VLM、T2I/T2V 等关键方向。
 
 - [本篇目录](part13/index.md)
-- [第44章：LLM 预训练数据工程](part13/ch44_pretrain_recipes.md)
-- [第45章：LLM 后训练数据工程](part13/ch45_posttrain_recipes.md)
-- [第46章：推理模型与强化学习数据工程](part13/ch46_rl_reasoning_data.md)
-- [第47章：视觉语言模型数据配方](part13/ch47_vlm_data_recipes.md)
-- [第48章：多模态生成数据工程](part13/ch48_t2i_t2v.md)
+- [第44章：LLM 预训练配方：DeepSeek 与 Qwen](part13/ch44_pretrain_recipes.md)
+- [第45章：LLM 后训练配方：SFT 与偏好](part13/ch45_posttrain_recipes.md)
+- [第46章：推理数据飞轮：R1 与 QwQ](part13/ch46_rl_reasoning_data.md)
+- [第47章：视觉语言配方：Qwen-VL 与 InternVL](part13/ch47_vlm_data_recipes.md)
+- [第48章：生成式数据管线：FLUX 与 Wan](part13/ch48_t2i_t2v.md)
 
 ## 第十四篇：项目实战
 

@@ -1,4 +1,4 @@
-# Chapter 1: The Data Revolution in the Era of Large Language Models
+# Chapter 1: Data Revolution for Large Language Models
 
 <div class="chapter-authors">Jun Yu; Changwen Chen; Ke Wang</div>
 

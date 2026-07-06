@@ -1,4 +1,4 @@
-# 第42章：语音与音频数据工程
+# 第42章：语音数据工程：控制与安全
 
 <div class="chapter-authors">陈凤欣（Fengxin Chen）；李轩（Xuan Li）</div>
 

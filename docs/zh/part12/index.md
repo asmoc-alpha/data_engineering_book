@@ -14,12 +14,12 @@
 
 ## 本篇目录
 
-- [第38章：文本语料数据工程](ch38_text_corpora_transparent_ledger.md)
-- [第39章：图文数据工程](ch39_image_text_candidate_pool_data_engineering.md)
-- [第40章：视觉文档与表格数据工程](ch40_visual_document_table_data_engineering.md)
-- [第41章：视觉推理数据工程](ch41_visual_reasoning_tool_data_engineering.md)
-- [第42章：语音与音频数据工程](ch42_speech_audio_interaction_data_engineering.md)
-- [第43章：推理轨迹数据工程](ch43_reasoning_trace_compression_data_engineering.md)
+- [第38章：文本语料工程：Web 与溯源账本](ch38_text_corpora_transparent_ledger.md)
+- [第39章：图文工程：过滤与 DataComp](ch39_image_text_candidate_pool_data_engineering.md)
+- [第40章：文档表格工程：稀疏表格](ch40_visual_document_table_data_engineering.md)
+- [第41章：视觉推理工程：图表与工具](ch41_visual_reasoning_tool_data_engineering.md)
+- [第42章：语音数据工程：控制与安全](ch42_speech_audio_interaction_data_engineering.md)
+- [第43章：推理轨迹工程：压缩与掩码](ch43_reasoning_trace_compression_data_engineering.md)
 
 ## 阅读顺序
 

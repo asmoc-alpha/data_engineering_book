@@ -1,4 +1,4 @@
-# Chapter 48: Multimodal Generative Data Engineering
+# Chapter 48: Generative Data Pipelines: FLUX and Wan
 
 <div class="chapter-authors">Ran Zhang; Jianqing Sun; Fan Yu</div>
 

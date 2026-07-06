@@ -1,4 +1,4 @@
-# Chapter 39: Image-Text Data Engineering
+# Chapter 39: Image-Text Engineering: Filtering and DataComp
 
 <div class="chapter-authors">Guanlin Mu; Xuhong Cao</div>
 
