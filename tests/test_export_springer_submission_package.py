@@ -185,6 +185,7 @@ class SpringerSubmissionPackageTest(unittest.TestCase):
             for name in [
                 "00_full_book_pagenumbered.pdf",
                 "00_front_matter.pdf",
+                "01-part1-index.pdf",
                 "01-part1-ch01_data_change.pdf",
                 "99_back_matter.pdf",
             ]:
@@ -195,6 +196,7 @@ class SpringerSubmissionPackageTest(unittest.TestCase):
                         "| No | Title | Source | PDF |",
                         "| --- | --- | --- | --- |",
                         "| front | Front Matter | title_page.md | `00_front_matter.pdf` |",
+                        "| 1 | Part I: Overview and Infrastructure - Part Overview | part1/index.md | `01-part1-index.pdf` |",
                         "| 1 | Chapter 1: Data Revolution for Large Language Models | part1/ch01_data_change.md | `01-part1-ch01_data_change.pdf` |",
                         "| back | Back Matter | afterword.md | `99_back_matter.pdf` |",
                     ]
@@ -213,7 +215,47 @@ class SpringerSubmissionPackageTest(unittest.TestCase):
             self.assertIn(f"{exporter.BOOK_SLUG}-Full-Manuscript.pdf", full_names)
             self.assertNotIn("Yu-FrontMatter-front-matter.pdf", full_names)
             self.assertIn("Yu-FrontMatter-Front-Matter.pdf", chapter_names)
+            self.assertIn("Yu-Part01-Part-I-Overview-and-Infrastructure-Part-Overview.pdf", chapter_names)
             self.assertIn("Yu-BackMatter-Back-Matter.pdf", chapter_names)
+
+    def test_tex_for_item_matches_by_source_markdown_after_renumbering(self):
+        exporter = load_exporter()
+
+        with tempfile.TemporaryDirectory(dir=ROOT / "output") as tmp:
+            tmp_path = Path(tmp)
+            latex_chapters = tmp_path / "latex_chapters"
+            latex_chapters.mkdir()
+            (latex_chapters / "15-part1-index.tex").write_text(r"\chapter*{Part I}", encoding="utf-8")
+            (latex_chapters / "88-afterword.tex").write_text(r"\chapter*{Afterword}", encoding="utf-8")
+            (latex_chapters / "README.md").write_text(
+                "\n".join(
+                    [
+                        "| No. | LaTeX | Source file | Title |",
+                        "| --- | --- | --- | --- |",
+                        "| 15 | `15-part1-index.tex` | `part1/index.md` | Part I: Overview and Infrastructure - Part Overview |",
+                        "| 88 | `88-afterword.tex` | `afterword.md` | Closing Volume: Afterword and User Guide |",
+                    ]
+                )
+                + "\n",
+                encoding="utf-8",
+            )
+            exporter.LATEX_CHAPTERS_DIR = latex_chapters
+
+            part_item = exporter.SubmissionItem(
+                no="1",
+                title="Part I: Overview and Infrastructure - Part Overview",
+                source="part1/index.md",
+                pdf="01-part1-index.pdf",
+            )
+            back_item = exporter.SubmissionItem(
+                no="Back",
+                title="Back matter",
+                source="afterword.md",
+                pdf="99_back_matter.pdf",
+            )
+
+            self.assertEqual(exporter.tex_for_item(part_item), latex_chapters / "15-part1-index.tex")
+            self.assertEqual(exporter.tex_for_item(back_item), latex_chapters / "88-afterword.tex")
 
     def test_create_zip_archive_preserves_package_root_and_manifest(self):
         exporter = load_exporter()

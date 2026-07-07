@@ -997,7 +997,8 @@ def prepare_pdf_items(items: list[NavItem]) -> list[NavItem]:
 def is_submission_pdf_item(item: NavItem) -> bool:
     path = item.path
     return bool(
-        re.match(r"part\d+/ch\d+_", path)
+        re.search(r"part\d+/index\.md$", path)
+        or re.match(r"part\d+/ch\d+_", path)
         or re.match(r"part14/p\d+_", path)
         or path.startswith("appendix_")
         or path == "afterword.md"
@@ -1006,6 +1007,25 @@ def is_submission_pdf_item(item: NavItem) -> bool:
 
 def submission_pdf_items(items: list[NavItem]) -> list[NavItem]:
     return [item for item in prepare_pdf_items(items) if is_submission_pdf_item(item)]
+
+
+def markdown_h1_title(path: str) -> str | None:
+    source = DOCS_EN / path
+    if not source.exists():
+        return None
+    for line in source.read_text(encoding="utf-8", errors="replace").splitlines():
+        match = re.match(r"^#\s+(.+?)\s*$", line)
+        if match:
+            return match.group(1).strip()
+    return None
+
+
+def submission_display_title(item: NavItem) -> str:
+    if re.search(r"part\d+/index\.md$", item.path):
+        h1 = markdown_h1_title(item.path)
+        if h1:
+            return f"{h1} - Part Overview"
+    return item.title
 
 
 def front_matter_pdf_items(items: list[NavItem]) -> list[NavItem]:
@@ -1902,20 +1922,21 @@ def export_submission_pdfs(items: list[NavItem], timeout: int, include_mathjax: 
     manuscript_items = submission_pdf_items(items)
     width = len(str(len(manuscript_items)))
     for index, item in enumerate(manuscript_items, 1):
+        display_title = submission_display_title(item)
         slug = slugify(Path(item.path).with_suffix("").as_posix().replace("/", "-"))
         prefix = f"{index:0{width}d}-{slug}"
         html_path = SUBMISSION_PDF_DIR / f"{prefix}.html"
         pdf_path = SUBMISSION_PDF_DIR / f"{prefix}.pdf"
         html_doc, stats = build_book_html(
             [item],
-            title_suffix=f" - {item.title}",
+            title_suffix=f" - {display_title}",
             include_mathjax=include_mathjax,
             include_cover_toc=False,
         )
         write_html(html_path, html_doc)
         print(
             "[stats] submission "
-            + item.title
+            + display_title
             + " | "
             + ", ".join(
                 [
@@ -1928,7 +1949,7 @@ def export_submission_pdfs(items: list[NavItem], timeout: int, include_mathjax: 
             )
         )
         export_pdf(html_path, pdf_path, timeout, min_size=10_000)
-        safe_title = item.title.replace("|", "\\|")
+        safe_title = display_title.replace("|", "\\|")
         manifest_lines.append(
             f"| {index} | {safe_title} | `{item.path}` | `{pdf_path.name}` |"
         )

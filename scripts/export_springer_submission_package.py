@@ -246,6 +246,9 @@ def submission_items() -> list[SubmissionItem]:
 
 
 def unit_label(item: SubmissionItem) -> str:
+    part_match = re.search(r"part(\d+)/index\.md$", item.source)
+    if part_match:
+        return f"Part{int(part_match.group(1)):02d}"
     if item.no.isdigit():
         if item.title.startswith("Project "):
             match = re.match(r"Project\s+(\d+)", item.title)
@@ -276,7 +279,29 @@ def named_item_filename(item: SubmissionItem, suffix: str) -> str:
     return f"{first_author_surname(authors)}-{unit_label(item)}-{safe_slug(item_title_for_name(item), max_len=90)}{suffix}"
 
 
+def latex_source_manifest() -> dict[str, Path]:
+    readme = LATEX_CHAPTERS_DIR / "README.md"
+    if not readme.exists():
+        return {}
+    row_re = re.compile(r"^\|\s*([^|]+?)\s*\|\s*`?([^|`]+?\.tex)`?\s*\|\s*`?([^|`]+?\.md)`?\s*\|")
+    manifest: dict[str, Path] = {}
+    for line in readme.read_text(encoding="utf-8", errors="replace").splitlines():
+        match = row_re.match(line)
+        if not match:
+            continue
+        _no, tex_name, source = [part.strip().strip("`") for part in match.groups()]
+        if _no == "---" or tex_name == "LaTeX":
+            continue
+        tex_path = LATEX_CHAPTERS_DIR / tex_name
+        if tex_path.exists():
+            manifest[source] = tex_path
+    return manifest
+
+
 def tex_for_item(item: SubmissionItem) -> Path | None:
+    by_source = latex_source_manifest()
+    if item.source in by_source:
+        return by_source[item.source]
     exact = LATEX_CHAPTERS_DIR / item.pdf.replace(".pdf", ".tex")
     if exact.exists():
         return exact
@@ -285,10 +310,6 @@ def tex_for_item(item: SubmissionItem) -> Path | None:
         matches = sorted(LATEX_CHAPTERS_DIR.glob(f"{prefix}*.tex"))
         if matches:
             return matches[0]
-    if item.title == "Afterword":
-        candidate = LATEX_CHAPTERS_DIR / "72-afterword.tex"
-        if candidate.exists():
-            return candidate
     return None
 
 

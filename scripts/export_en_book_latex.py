@@ -493,13 +493,30 @@ def is_submission_latex_unit(item: NavItem) -> bool:
         return False
     if not re.search(r"part\d+/", item.path) and not item.path.startswith("appendix_") and item.path != "afterword.md":
         return False
-    if re.search(r"part\d+/index\.md$", item.path):
-        return False
     return True
 
 
 def submission_latex_items(items: list[NavItem]) -> list[NavItem]:
     return [item for item in items if is_submission_latex_unit(item)]
+
+
+def markdown_h1_title(path: str) -> str | None:
+    source = DOCS_EN / path
+    if not source.exists():
+        return None
+    for line in source.read_text(encoding="utf-8", errors="replace").splitlines():
+        match = re.match(r"^#\s+(.+?)\s*$", line)
+        if match:
+            return match.group(1).strip()
+    return None
+
+
+def submission_display_title(item: NavItem) -> str:
+    if re.search(r"part\d+/index\.md$", item.path):
+        h1 = markdown_h1_title(item.path)
+        if h1:
+            return f"{h1} - Part Overview"
+    return item.title
 
 
 def latex_unit_slug(item: NavItem, index: int) -> str:
@@ -1294,12 +1311,13 @@ def export_split(items: list[NavItem], compile_output: bool, timeout: int) -> No
     for index, item in enumerate(submission_latex_items(items), 1):
         chapter_stats = ExportStats()
         shared_assets.stats = chapter_stats
+        display_title = submission_display_title(item)
         tex_path = CHAPTERS_DIR / latex_unit_slug(item, index)
         tex_body = build_latex_body([item], shared_assets, chapter_stats, tex_path.parent)
         write_outputs(tex_body + "\n", chapter_stats, tex_path, tex_path.with_suffix(".warnings.txt"))
         chapter_paths.append(tex_path)
         chapter_manifest_lines.append(
-            f"| {index} | `{tex_path.name}` | `{item.path}` | {item.title} |"
+            f"| {index} | `{tex_path.name}` | `{item.path}` | {display_title} |"
         )
     (CHAPTERS_DIR / "README.md").write_text("\n".join(chapter_manifest_lines) + "\n", encoding="utf-8")
 
