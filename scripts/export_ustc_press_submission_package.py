@@ -335,13 +335,30 @@ class UstcAssetManager(zh_latex.AssetManager):
 def is_submission_unit(item: zh_latex.NavItem) -> bool:
     if item.path == "index.md":
         return False
-    if re.search(r"part\d+/index\.md$", item.path):
-        return False
     return True
 
 
 def submission_items(items: list[zh_latex.NavItem]) -> list[zh_latex.NavItem]:
     return [item for item in items if is_submission_unit(item)]
+
+
+def markdown_h1_title(path: str) -> str | None:
+    source = zh_latex.DOCS_ZH / path
+    if not source.exists():
+        return None
+    for line in source.read_text(encoding="utf-8", errors="replace").splitlines():
+        match = re.match(r"^#\s+(.+?)\s*$", line)
+        if match:
+            return match.group(1).strip()
+    return None
+
+
+def submission_display_title(item: zh_latex.NavItem) -> str:
+    if re.search(r"part\d+/index\.md$", item.path):
+        h1 = markdown_h1_title(item.path)
+        if h1:
+            return f"{h1} - 本篇概览"
+    return item.title
 
 
 def latex_unit_slug(item: zh_latex.NavItem, index: int) -> str:
@@ -538,11 +555,12 @@ def export_package(limit: int, compile_pdf: bool, timeout: int) -> None:
     for index, item in enumerate(items, 1):
         chapter_stats = zh_latex.ExportStats()
         assets.stats = chapter_stats
+        display_title = submission_display_title(item)
         tex_path = CHAPTERS_DIR / latex_unit_slug(item, index)
         unit_tex = build_unit_tex(item, assets, chapter_stats, LATEX_DIR)
         zh_latex.write_outputs(unit_tex, chapter_stats, tex_path, tex_path.with_suffix(".warnings.txt"))
         chapter_paths.append(tex_path)
-        manifest_lines.append(f"| {index} | `{tex_path.name}` | `{item.path}` | {item.title} |")
+        manifest_lines.append(f"| {index} | `{tex_path.name}` | `{item.path}` | {display_title} |")
         total.files += chapter_stats.files
         total.missing += chapter_stats.missing
         total.images += chapter_stats.images
