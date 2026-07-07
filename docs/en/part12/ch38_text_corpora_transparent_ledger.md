@@ -250,7 +250,7 @@ Figure 38-1 illustrates the corresponding workflow or structure.
 
 ![Figure 38-1 FineWeb MinHash deduplication and PII-processing flow](../../images/part12/Mu-Chap38-Fig01-EN.svg)
 
-*Figure 38-1: FineWeb MinHash deduplication and PII-processing flow. Source: original illustration based on DataTrove and the FineWeb dataset card*
+*Figure 38-1: FineWeb MinHash deduplication and PII-processing flow*
 
 #### Case A.4.3 FineWeb's Per-crawl Deduplication Judgment
 
@@ -262,7 +262,7 @@ Figure 38-2 illustrates the corresponding workflow or structure.
 
 ![Figure 38-2 FineWeb data-processing-choice ablation loop](../../images/part12/Mu-Chap38-Fig02-EN.svg)
 
-*Figure 38-2: FineWeb data-processing-choice ablation loop. Source: original illustration based on FineWeb paper Section 3.1*
+*Figure 38-2: FineWeb data-processing-choice ablation loop*
 
 ### Case A.5: Evaluating FineWeb Data-processing Choices
 
@@ -283,8 +283,6 @@ FineWeb's evaluation protocol can be summarized in Table 38-4.
 | Training framework | Nanotron | Fixes training implementation |
 | Evaluation framework | lighteval | Fixes evaluation implementation |
 | Evaluation tasks | CommonSense QA, HellaSwag, OpenBook QA, PIQA, SIQA, WinoGrande, ARC, MMLU | Uses multitask signals to evaluate data-processing effects |
-
-Source: FineWeb paper Section 3.1, Experimental setup.
 
 If data version $v$ is trained twice, producing models $M_{v,1}$ and $M_{v,2}$, and each model is evaluated on $k$ tasks, the version score can be written as:
 
@@ -400,8 +398,6 @@ Table 38-6 summarizes the corresponding comparison and engineering consideration
 | `v1_6-sample` | 2024-01-31 | 16.4 GB | Exploratory sample of about 10B tokens | Quick debugging and data browsing |
 | `v1_7` | 2024-04-15 | 4.5 TB | Used to train OLMo 7B-v1.7, with new sources, more quality filtering, and fuzzy deduplication | Current default version and transparent-training reference |
 
-Source: Versions section of the Hugging Face `allenai/dolma` dataset card.
-
 #### Case B.2.1 v1.6 Source Structure
 
 Dolma covers Web, code, papers, social media, books, and encyclopedic sources. To avoid mixing versions, Table 38-7 uses the coarse-grained statistics from the dataset card's v1.6 summary statistics. The v1.7 sources are more fine-grained, adding Refined Web, StarCoder, arXiv, StackExchange, Flan, OpenWebMath, Algebraic Stack, MegaWika, and other sources. Subsequent writing or experiments should explicitly state which version is used.
@@ -418,8 +414,6 @@ Dolma covers Web, code, papers, social media, books, and encyclopedic sources. T
 | Project Gutenberg | books | 20.4 GB | 0.056M | 4.0B | 6.0B |
 | Wikipedia and Wikibooks | encyclopedic | 16.2 GB | 6.2M | 3.7B | 4.3B |
 | Total | mixed | 11,519 GB | 4,367M | 2,318B | 3,059B |
-
-Source: Hugging Face `allenai/dolma` dataset card, Summary Statistics v1.6. GB, M, and B follow the dataset-card convention.
 
 Table 38-7 should not be read only as a scale display. It reveals three engineering facts.
 
@@ -539,13 +533,11 @@ Table 38-9 summarizes the corresponding comparison and engineering consideration
 | 3 | Mixer | Remove, filter, or mix documents based on attribute values | Sample proportion, source mix, data version | Opaque sample proportions cause token-accounting errors |
 | 4 | Tokenization | Use Hugging Face-compatible tokenizers | Token counts, tokenizer version, training stream | Tokenizer changes alter token counts and training budget |
 
-Source: Dolma Toolkit documentation README.
-
 Figure 38-3 illustrates the corresponding workflow or structure.
 
 ![Figure 38-3 Dolma transparent-corpus evidence chain](../../images/part12/Mu-Chap38-Fig03-EN.svg)
 
-*Figure 38-3: Dolma transparent-corpus evidence chain. Source: original illustration based on AllenAI Dolma Toolkit documentation*
+*Figure 38-3: Dolma transparent-corpus evidence chain*
 
 The boundary between toolchains and manual audits matters. A toolchain can stably generate statistics, tags, hashes, and manifests, but it cannot replace all audits. License boundaries, PII removal, evaluation contamination, and source representativeness still require human rules, sample review, or dedicated detection tasks.
 
@@ -569,7 +561,7 @@ Figure 38-4 illustrates the corresponding workflow or structure.
 
 ![Figure 38-4 Dolma source mix and training-diagnosis loop](../../images/part12/Mu-Chap38-Fig04-EN.svg)
 
-*Figure 38-4: Dolma source mix and training-diagnosis loop. Source: authors' illustration based on Dolma and OLMo*
+*Figure 38-4: Dolma source mix and training-diagnosis loop*
 
 #### Case B.5.2 Diagnosis Checklist
 

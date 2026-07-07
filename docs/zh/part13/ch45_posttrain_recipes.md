@@ -146,7 +146,7 @@ Self-Instruct (Wang et al. 2023) 是指令合成的代表性方法之一。它�
 图45-2展示了相应的流程或结构。
 
 ![图45-2：Self-Instruct、Evol-Instruct 与 Magpie 三流派 pipeline 对比](../../images/part13/Wang-Chap45-Fig02.svg)
-*图45-2：Self-Instruct、Evol-Instruct 与 Magpie 三流派 pipeline 对比*
+*图45-2：三类 SFT 数据合成流派对比*
 
 无论采用哪一种合成流派，SFT 数据都不应该直接从生成器进入训练集。更稳妥的做法是设置四道门禁。第一道是格式门禁，检查多轮对话角色是否完整、字段是否缺失、JSON 或 ChatML 是否可解析、是否存在截断和乱码。第二道是语义门禁，检查 instruction 是否真的可回答，answer 是否覆盖问题核心，是否存在问答不匹配、答非所问或解释跳步。第三道是分布门禁，检查任务类型、语言、长度、领域、难度和安全类别是否过度集中。第四道是泄漏门禁，检查样本是否与评测集、benchmark 题面、公开答案或内部保留集近重复。
 

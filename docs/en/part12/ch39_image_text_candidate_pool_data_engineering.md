@@ -79,7 +79,7 @@ Figure 39-1 illustrates the corresponding workflow or structure.
 
 ![Figure 39-1 Multi-channel schema for LAION-5B image-text candidate records](../../images/part12/Mu-Chap39-Fig01-EN.svg)
 
-*Figure 39-1: Multi-channel schema for LAION-5B image-text candidate records. Source: original illustration based on the LAION-5B paper and LAION dataset-spec*
+*Figure 39-1: LAION-5B candidate record schema*
 
 Table 39-2 summarizes the corresponding comparison and engineering considerations.
 
@@ -214,7 +214,7 @@ Figure 39-2 illustrates the corresponding workflow or structure.
 
 ![Figure 39-2 Image-text candidate-pool quality evaluation and closed-loop repair](../../images/part12/Mu-Chap39-Fig02-EN.svg)
 
-*Figure 39-2: Image-text quality evaluation and closed-loop repair. Source: authors' illustration based on LAION-5B and DataComp*
+*Figure 39-2: Image-text quality evaluation loop*
 
 Table 39-4 summarizes the corresponding comparison and engineering considerations.
 

@@ -233,7 +233,7 @@ def greedy_pack_sequences(
     return packed
 ```
 
-*代码清单6-4：贪心序列 Packing 示意代码。该片段展示基本策略，生产环境应补充样本边界、标签 mask 和可复现实验记录*
+*代码清单6-4：贪心序列 Packing 示例*
 
 对于包含大量短文档的训练集，启用 Packing 通常可以提高有效 Token 吞吐量（Tokens/s）。实际收益取决于文档长度分布、max sequence length、attention mask 实现和硬件配置，应在目标数据集上用 padding ratio 与 tokens/s 共同验证。
 
@@ -301,7 +301,7 @@ dataloader = DataLoader(
 )
 ```
 
-*代码清单6-5：MosaicML Streaming Dataset DataLoader 配置片段。生产环境应结合对象存储带宽、缓存策略和节点故障恢复能力压测*
+*代码清单6-5：MosaicML Streaming Dataset 配置*
 
 代码清单6-6展示了基于 `np.memmap` 的二进制 Token ID 数据集示意实现。
 
@@ -328,7 +328,7 @@ class MemmapDataset(torch.utils.data.Dataset):
         return torch.from_numpy(chunk.astype(np.int64))
 ```
 
-*代码清单6-6：基于 np.memmap 的 Token ID 数据集示意代码。生产环境应补充 dtype、文件完整性、索引边界和跨平台兼容性校验*
+*代码清单6-6：基于 np.memmap 的 Token ID 数据集*
 
 ### 6.4.2 吞吐瓶颈诊断：三步系统化排查
 
@@ -397,7 +397,7 @@ dataloader = DataLoader(
 )
 ```
 
-*代码清单6-7：多节点分布式 DataLoader 配置片段。生产环境应结合 rank-aware 分片、全局 shuffle 和 token 计数一致性检验*
+*代码清单6-7：多节点分布式 DataLoader 配置*
 
 **避免重复读取**是多节点分布式 DataLoader 的一个常见易错点：如果各节点的 DataLoader 没有进行适当的 rank-aware 划分，每个节点会独立读取完整数据集，导致所有节点看到相同的数据顺序，梯度更新实际上是在重复数据上进行的——等效于 batch size 没有随着节点数增加而正确扩展。对于非 `StreamingDataset` 的自定义数据集，需要使用 `DistributedSampler`，并在每个 epoch 开始时调用 `sampler.set_epoch(epoch)` 以确保不同 epoch 之间的 shuffle 随机性。
 

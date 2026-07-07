@@ -206,7 +206,7 @@ calibrated_threshold = 0.8
 lsh = MinHashLSH(threshold=calibrated_threshold, num_perm=128)
 ```
 
-*代码清单2-3：基于 MinHash LSH 的近似重复检测示例。生产环境中应记录阈值、分片策略和抽样复核结果*
+*代码清单2-3：MinHash LSH 近似重复检测示例*
 
 **3. 基准污染 (Benchmark Contamination)**
 

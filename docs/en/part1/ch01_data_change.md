@@ -89,7 +89,7 @@ In 2022, a DeepMind paper titled "Training Compute-Optimal Large Language Models
 
 The DeepMind team conducted rigorously controlled compute-optimal experiments. Their results showed that the 70B-parameter Chinchilla model, trained on approximately 1.4T tokens, outperformed the previously larger 280B-parameter Gopher model (Rae et al. 2021) on a wide range of evaluations. The contrast between the two model families in terms of parameter count and training data is presented in Table 1-1.
 
-*Table 1-1: DeepMind old-paradigm and new-paradigm data resources. Source: compiled from Rae et al. (2021) and Hoffmann et al. (2022)*
+*Table 1-1: Gopher and Chinchilla data resources*
 
 | Model (Organization) | Parameter Count $N$ | Training Token Count $D$ | Estimated Training Compute (relative) | Inference-Side Characteristics |
 | :--- | :--- | :--- | :--- | :--- |

@@ -261,8 +261,8 @@ Qwen2.5 的 schedule 可以从三个层次理解。第一层是基础预训练�
 
 图44-5展示了相应的流程或结构。
 
-![图44-5：Llama-3 退火期数据组成时间轴 (Curriculum Learning Schedule)](../../images/part13/Wang-Chap44-Fig05-EN.svg)
-*图44-5：Llama-3 退火期数据组成时间轴 (Curriculum Learning Schedule)*
+![图44-5：Llama-3 退火期数据组成时间轴](../../images/part13/Wang-Chap44-Fig05-EN.svg)
+*图44-5：Llama-3 退火期数据组成时间轴*
 
 Qwen2.5 在数据采样策略上也体现了经典的 Curriculum Learning（课程学习）(Bengio et al. 2009) 思想。第一阶段（基础奠基），模型主要接触海量泛网页数据与基础语料，重点学习语言的统计分布与常识；第二阶段（高质量提纯），语料的质量过滤阈值被大幅提高，泛文本比例下降，代码、数学及严谨学术文档的密度增加，这是能力提升的关键期；第三阶段（退火与超长上下文），学习率下降（退火），开始引入较高比例的合成数据、特定领域的高精人工指令数据以及超长序列数据，实现从预训练到对齐（Alignment）的平滑过渡。
 

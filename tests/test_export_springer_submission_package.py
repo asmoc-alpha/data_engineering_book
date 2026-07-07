@@ -30,14 +30,18 @@ class SpringerSubmissionPackageTest(unittest.TestCase):
         with tempfile.TemporaryDirectory(dir=ROOT / "output") as tmp:
             package_dir = exporter.export_package(Path(tmp), include_pdfs=False, include_figures=False)
 
-            self.assertTrue((package_dir / "Metadata").is_dir())
-            self.assertTrue((package_dir / "Source_Files").is_dir())
-            self.assertTrue((package_dir / "Permissions").is_dir())
-            self.assertTrue((package_dir / "Checksums" / "manifest.json").exists())
-            manifest = json.loads((package_dir / "Checksums" / "manifest.json").read_text(encoding="utf-8"))
+            self.assertTrue((package_dir / "01_Source_Files").is_dir())
+            self.assertTrue((package_dir / "02_PDF_Files").is_dir())
+            self.assertTrue((package_dir / "03_Third_Party_Permissions").is_dir())
+            self.assertTrue((package_dir / "_Internal_Not_For_Submission" / "Checksums" / "manifest.json").exists())
+            manifest = json.loads(
+                (package_dir / "_Internal_Not_For_Submission" / "Checksums" / "manifest.json").read_text(
+                    encoding="utf-8"
+                )
+            )
             rel_paths = {row["relative_path"] for row in manifest["files"]}
-            self.assertIn("Metadata/18_springer_submission_package.md", rel_paths)
-            self.assertIn("Permissions/README.md", rel_paths)
+            self.assertIn("README.md", rel_paths)
+            self.assertIn("03_Third_Party_Permissions/README.md", rel_paths)
 
     def test_export_package_includes_chapter_level_latex_sources(self):
         exporter = load_exporter()
@@ -76,21 +80,21 @@ class SpringerSubmissionPackageTest(unittest.TestCase):
 
             chapter_source = (
                 package_dir
-                / "Source_Files"
+                / "01_Source_Files"
                 / "LaTeX"
                 / "chapters"
                 / "01-part1-ch01-data-change.tex"
             )
             self.assertTrue(chapter_source.exists())
-            self.assertIn("../assets/asset_0001.png", chapter_source.read_text(encoding="utf-8"))
-            manuscript = package_dir / "Source_Files" / "LaTeX" / "parts" / "00-manuscript.tex"
+            self.assertIn("../../Figures/LaTeX_Assets/asset_0001.png", chapter_source.read_text(encoding="utf-8"))
+            manuscript = package_dir / "01_Source_Files" / "LaTeX" / "parts" / "00-manuscript.tex"
             self.assertIn(
                 r"\input{../chapters/01-part1-ch01-data-change.tex}",
                 manuscript.read_text(encoding="utf-8"),
             )
-            self.assertIn("../assets/asset_0001.png", manuscript.read_text(encoding="utf-8"))
-            root_source = package_dir / "Source_Files" / "LaTeX" / "data_engineering_book_en_16k_latex.tex"
-            self.assertIn("assets/asset_0001.png", root_source.read_text(encoding="utf-8"))
+            self.assertIn("../../Figures/LaTeX_Assets/asset_0001.png", manuscript.read_text(encoding="utf-8"))
+            root_source = package_dir / "01_Source_Files" / "LaTeX" / "data_engineering_book_en_16k_latex.tex"
+            self.assertIn("../Figures/LaTeX_Assets/asset_0001.png", root_source.read_text(encoding="utf-8"))
             self.assertIn("LaTeX/chapters", (package_dir / "README.md").read_text(encoding="utf-8"))
 
     def test_export_package_generates_missing_latex_sources_before_copying(self):
@@ -138,18 +142,18 @@ class SpringerSubmissionPackageTest(unittest.TestCase):
             self.assertTrue(
                 (
                     package_dir
-                    / "Source_Files"
+                    / "01_Source_Files"
                     / "LaTeX"
                     / "chapters"
                     / "01-part1-ch01-data-change.tex"
                 ).exists()
             )
-            self.assertTrue((package_dir / "Source_Files" / "LaTeX" / "parts" / "00-manuscript.tex").exists())
-            self.assertTrue((package_dir / "Source_Files" / "LaTeX" / "assets" / "asset_0001.png").exists())
+            self.assertTrue((package_dir / "01_Source_Files" / "LaTeX" / "parts" / "00-manuscript.tex").exists())
+            self.assertTrue((package_dir / "01_Source_Files" / "Figures" / "LaTeX_Assets" / "asset_0001.png").exists())
             self.assertTrue(
                 (
                     package_dir
-                    / "Source_Files"
+                    / "01_Source_Files"
                     / "LaTeX"
                     / "data_engineering_book_en_16k_latex.tex"
                 ).exists()
@@ -165,9 +169,9 @@ class SpringerSubmissionPackageTest(unittest.TestCase):
             self.assertTrue(readme.exists())
             text = readme.read_text(encoding="utf-8")
             self.assertIn("Data Engineering for Large Foundation Models: A Handbook", text)
-            self.assertIn("Source_Files/LaTeX", text)
-            self.assertIn("Full_PDF", text)
-            self.assertIn("Chapter_PDFs", text)
+            self.assertIn("01_Source_Files/LaTeX", text)
+            self.assertIn("Full_Manuscript_PDF", text)
+            self.assertIn("Individual_Chapter_PDFs", text)
             self.assertIn("human-only", text)
             self.assertIn("License to Publish", text)
 
@@ -185,19 +189,31 @@ class SpringerSubmissionPackageTest(unittest.TestCase):
                 "99_back_matter.pdf",
             ]:
                 (pdf_dir / name).write_bytes(b"%PDF-1.4\n%test\n")
-            (pdf_dir / "README.md").write_text("# PDFs\n", encoding="utf-8")
+            (pdf_dir / "README.md").write_text(
+                "\n".join(
+                    [
+                        "| No | Title | Source | PDF |",
+                        "| --- | --- | --- | --- |",
+                        "| front | Front Matter | title_page.md | `00_front_matter.pdf` |",
+                        "| 1 | Chapter 1: Data Revolution for Large Language Models | part1/ch01_data_change.md | `01-part1-ch01_data_change.pdf` |",
+                        "| back | Back Matter | afterword.md | `99_back_matter.pdf` |",
+                    ]
+                )
+                + "\n",
+                encoding="utf-8",
+            )
             exporter.SUBMISSION_PDF_DIR = pdf_dir
 
             package_dir = tmp_path / "package"
             exporter.copy_pdfs(package_dir)
 
-            full_names = {path.name for path in (package_dir / "Full_PDF").glob("*.pdf")}
-            chapter_names = {path.name for path in (package_dir / "Chapter_PDFs").glob("*.pdf")}
+            full_names = {path.name for path in (package_dir / "02_PDF_Files" / "Full_Manuscript_PDF").glob("*.pdf")}
+            chapter_names = {path.name for path in (package_dir / "02_PDF_Files" / "Individual_Chapter_PDFs").glob("*.pdf")}
 
-            self.assertIn(f"{exporter.BOOK_SLUG}_00_full_book_pagenumbered.pdf", full_names)
-            self.assertNotIn(f"{exporter.BOOK_SLUG}_00_front_matter.pdf", full_names)
-            self.assertIn(f"{exporter.BOOK_SLUG}_00_front_matter.pdf", chapter_names)
-            self.assertIn(f"{exporter.BOOK_SLUG}_99_back_matter.pdf", chapter_names)
+            self.assertIn(f"{exporter.BOOK_SLUG}-Full-Manuscript.pdf", full_names)
+            self.assertNotIn("Yu-FrontMatter-front-matter.pdf", full_names)
+            self.assertIn("Yu-FrontMatter-Front-Matter.pdf", chapter_names)
+            self.assertIn("Yu-BackMatter-Back-Matter.pdf", chapter_names)
 
     def test_create_zip_archive_preserves_package_root_and_manifest(self):
         exporter = load_exporter()
@@ -212,9 +228,10 @@ class SpringerSubmissionPackageTest(unittest.TestCase):
                 names = set(archive.namelist())
 
             root = f"{exporter.BOOK_SLUG}/"
-            self.assertIn(root + "README.md", names)
-            self.assertIn(root + "Checksums/manifest.json", names)
-            self.assertIn(root + "Source_Files/mkdocs.yml", names)
+            self.assertNotIn(root + "README.md", names)
+            self.assertNotIn(root + "_Internal_Not_For_Submission/Checksums/manifest.json", names)
+            self.assertTrue(any(name.startswith(root + "01_Source_Files/") for name in names))
+            self.assertTrue(any(name.startswith(root + "03_Third_Party_Permissions/") for name in names))
 
 
 if __name__ == "__main__":

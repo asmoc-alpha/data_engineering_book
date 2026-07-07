@@ -551,7 +551,7 @@ CAPTION_LINE_RE = re.compile(
 
 
 def protect(replacements: list[str], latex: str) -> str:
-    token = f"@@LATEX_BLOCK_{len(replacements)}@@"
+    token = f"@@LATEXBLOCK{len(replacements)}@@"
     replacements.append(latex)
     return token
 
@@ -561,6 +561,15 @@ def breakable_monospace(value: str) -> str:
         value.replace(r"\_", r"\_\allowbreak{}")
         .replace("/", r"/\allowbreak{}")
         .replace(".", r".\allowbreak{}")
+        .replace("-", r"-\allowbreak{}")
+    )
+
+
+def breakable_latex_text(value: str) -> str:
+    """Add invisible breakpoints to long technical tokens in normal text."""
+    return (
+        value.replace(r"\_", r"\_\allowbreak{}")
+        .replace("/", r"/\allowbreak{}")
         .replace("-", r"-\allowbreak{}")
     )
 
@@ -624,10 +633,10 @@ def inline_to_latex(text: str) -> str:
     def link_repl(match: re.Match[str]) -> str:
         raw_label = re.sub(r"\s+", " ", match.group(1)).strip()
         raw_url = match.group(2).strip()
-        label = escape_plain(raw_label)
+        label = breakable_latex_text(escape_plain(raw_label))
         url = latex_url(raw_url)
         if not label:
-            label = escape_plain(url)
+            label = breakable_latex_text(escape_plain(url))
         elif raw_label == raw_url and re.match(r"^https?://", raw_label):
             label = rf"\nolinkurl{{{latex_url(raw_label)}}}"
         return protect(replacements, rf"\href{{{url}}}{{{label}}}")
@@ -645,22 +654,23 @@ def inline_to_latex(text: str) -> str:
     text = re.sub(URL_PATTERN, bare_url_repl, text)
 
     def bold_repl(match: re.Match[str]) -> str:
-        value = escape_plain(match.group(1).strip())
+        value = breakable_latex_text(escape_plain(match.group(1).strip()))
         return protect(replacements, rf"\textbf{{{value}}}")
 
     text = re.sub(r"\*\*([^*\n][\s\S]*?[^*\n])\*\*", bold_repl, text)
 
     def italic_repl(match: re.Match[str]) -> str:
-        value = escape_plain(match.group(1).strip())
+        value = breakable_latex_text(escape_plain(match.group(1).strip()))
         return protect(replacements, rf"\emph{{{value}}}")
 
     text = re.sub(r"(?<!\*)\*([^*\n]+)\*(?!\*)", italic_repl, text)
     text = re.sub(r"__([^_\n]+)__", bold_repl, text)
     text = re.sub(r"~~([^~\n]+)~~", lambda m: escape_plain(m.group(1)), text)
 
-    escaped = escape_plain(text)
+    escaped = breakable_latex_text(escape_plain(text))
     escaped = escaped.replace("\n", r"\newline{} ")
     for index, latex in enumerate(replacements):
+        escaped = escaped.replace(f"@@LATEXBLOCK{index}@@", latex)
         escaped = escaped.replace(rf"@@LATEX\_BLOCK\_{index}@@", latex)
         escaped = escaped.replace(f"@@LATEX_BLOCK_{index}@@", latex)
     return escaped.strip()
@@ -765,14 +775,22 @@ def render_image(
     if not image_ref.is_absolute():
         image_ref = (OUT_DIR / image_ref).resolve()
     image_ref_text = Path(os.path.relpath(image_ref, tex_dir)).as_posix()
+    image_options = latex_image_options(image_path)
     return "\n".join(
         [
             r"\begin{figure}[H]",
             r"\centering",
-            rf"\includegraphics[width=\linewidth,height=0.55\textheight,keepaspectratio]{{{image_ref_text}}}",
+            rf"\includegraphics[{image_options}]{{{image_ref_text}}}",
             r"\end{figure}",
         ]
     )
+
+
+def latex_image_options(image_path: Path) -> str:
+    stem = image_path.stem
+    if stem in {"Du-Chap21-Fig04-EN", "Du-Chap21-Fig04"}:
+        return r"width=0.62\linewidth,height=0.38\textheight,keepaspectratio"
+    return r"width=\linewidth,height=0.55\textheight,keepaspectratio"
 
 
 def preprocess_markdown(text: str) -> str:

@@ -105,7 +105,7 @@ OpenThoughts / GSM8K / MATH-500 / HumanEval
 图P12-1展示了相应的流程或结构。
 
 ![图 P12-1：从冷启动数据抽取、多路推理采样、verifier 池、拒绝采样到二轮 SFT 合并与训练评估的闭环结构](../../images/part14/p12/Wang-Project12-Fig01.svg)
-*图 P12-1：从冷启动数据抽取、多路推理采样、verifier 池、拒绝采样到二轮 SFT 合并与训练评估的闭环结构*
+*图 P12-1：R1 推理数据飞轮闭环结构*
 
 第一个组件是 **冷启动数据抽取**。对应脚本为 `cold_start_data.py`。它负责从已有数据源中抽取适合 SFT 的样本，并统一为 `messages` 格式。数学样本会组织成 `Reasoning:` 和 `Final Answer:`，代码样本会组织成 `Reasoning:` 和 fenced Python code block。冷启动数据的作用不是直接训练出最高性能模型，而是让模型具备基本的推理输出结构、语言风格和可解析格式。
 

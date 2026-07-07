@@ -307,7 +307,7 @@ torch.nn.Module references retained in embedding cache (est. leak: 2.1 GB/batch)
 Unprocessed queue depth at crash: 3,421 audio segments (est. 68h audio).
 ```
 
-*代码清单10-4：Diarization 内存泄漏错误日志示例。日志内容为匿名化示例，内存水位和批次大小应按节点配置压测*
+*代码清单10-4：Diarization 内存泄漏日志示例*
 
 **[根因与修复]**：
 

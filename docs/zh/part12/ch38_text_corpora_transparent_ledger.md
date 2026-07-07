@@ -250,7 +250,7 @@ MinHash 用多个哈希函数近似这个相似度。FineWeb 论文说明其去�
 
 ![图38-1 FineWeb MinHash 去重和 PII 处理流程](../../images/part12/Mu-Chap38-Fig01-ZH.svg)
 
-*图38-1：FineWeb MinHash 去重和 PII 处理流程。来源：基于 DataTrove 与 FineWeb 数据集卡绘制*
+*图38-1：FineWeb MinHash 去重和 PII 处理流程*
 
 #### 案例A.4.3 FineWeb 按 crawl 独立去重的判断
 
@@ -262,7 +262,7 @@ MinHash 用多个哈希函数近似这个相似度。FineWeb 论文说明其去�
 
 ![图38-2 FineWeb 数据处理选择的消融评估回路](../../images/part12/Mu-Chap38-Fig02-ZH.svg)
 
-*图38-2：FineWeb 数据处理选择的消融评估回路。来源：基于 FineWeb 论文第 3.1 节绘制*
+*图38-2：FineWeb 数据处理选择的消融评估回路*
 
 ### 案例A.5：FineWeb 的数据处理选择评估
 
@@ -283,8 +283,6 @@ FineWeb 的评估协议可以抽象为表38-4。
 | 训练框架 | Nanotron | 固定训练实现 |
 | 评测框架 | lighteval | 固定评测实现 |
 | 评测任务 | CommonSense QA、HellaSwag、OpenBook QA、PIQA、SIQA、WinoGrande、ARC、MMLU | 用多任务信号评估数据处理效果 |
-
-数据来源 FineWeb paper Section 3.1 Experimental setup。
 
 若第 $v$ 个数据版本训练两次，得到模型 $M_{v,1}$ 和 $M_{v,2}$，每个模型在 $k$ 个任务上得分，则版本得分可以写为：
 
@@ -400,8 +398,6 @@ Dolma 不是单一静态文件，而是带版本演进的语料资产。Hugging 
 | `v1_6-sample` | 2024-01-31 | 16.4 GB | 约 10B tokens 的探索样本 | 快速调试和数据浏览 |
 | `v1_7` | 2024-04-15 | 4.5 TB | 用于训练 OLMo 7B-v1.7，新来源、更多质量过滤、fuzzy deduplication | 当前默认版本和透明训练参照 |
 
-数据来源 Hugging Face `allenai/dolma` 数据卡 Versions 小节。
-
 #### 案例B.2.1 v1.6 来源结构
 
 Dolma 的来源覆盖 Web、代码、论文、社交媒体、书籍和百科。为了避免不同版本混淆，表38-7 使用数据卡中 v1.6 summary statistics 的大类统计。v1.7 的来源更加细分，新增 Refined Web、StarCoder、arXiv、StackExchange、Flan、OpenWebMath、Algebraic Stack、MegaWika 等 source；后续写作或实验应明确使用哪个版本。
@@ -418,8 +414,6 @@ Dolma 的来源覆盖 Web、代码、论文、社交媒体、书籍和百科。�
 | Project Gutenberg | books | 20.4 GB | 0.056M | 4.0B | 6.0B |
 | Wikipedia and Wikibooks | encyclopedic | 16.2 GB | 6.2M | 3.7B | 4.3B |
 | Total | mixed | 11,519 GB | 4,367M | 2,318B | 3,059B |
-
-数据来源 Hugging Face `allenai/dolma` 数据卡 Summary Statistics v1.6。表中 GB、M、B 均沿用数据卡口径。
 
 表38-7 不应只被读成规模展示。它提示三类工程事实。
 
@@ -539,13 +533,11 @@ Dolma Toolkit 文档把数据整理概括为四个动作：tag、dedup、mix、t
 | 3 | Mixer | 根据属性值移除、过滤或混合文档 | sample proportion、source mix、数据版本 | sample proportion 不透明会导致 token accounting 错误 |
 | 4 | Tokenization | 使用 Hugging Face 兼容 tokenizer | token 计数、tokenizer 版本、训练流 | tokenizer 变化会改变 token 数和训练预算 |
 
-数据来源 Dolma Toolkit documentation README。
-
 图38-3展示了相应的流程或结构。
 
 ![图38-3 Dolma 透明语料证据链](../../images/part12/Mu-Chap38-Fig03-ZH.svg)
 
-*图38-3：Dolma 透明语料证据链。来源：基于 AllenAI Dolma Toolkit 文档绘制*
+*图38-3：Dolma 透明语料证据链*
 
 这里要注意工具链和人工审计的边界。工具链能稳定地产生统计、标签、hash 和 manifest，但它不能替代所有审计。许可边界、PII removal、评测污染和 source 代表性仍需要人工规则、抽样复核或专门的检测任务介入。
 
@@ -569,7 +561,7 @@ $$
 
 ![图38-4 Dolma source mix 与训练诊断回路](../../images/part12/Mu-Chap38-Fig04-ZH.svg)
 
-*图38-4：Dolma source mix 与训练诊断回路。来源：基于 Dolma 数据集卡与 OLMo 训练资料绘制*
+*图38-4：Dolma source mix 与训练诊断回路*
 
 #### 案例B.5.2 诊断清单
 

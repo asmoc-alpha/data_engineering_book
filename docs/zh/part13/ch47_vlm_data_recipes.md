@@ -46,7 +46,7 @@ VLM 数据配方；视觉语言模型；重描述；高分辨率训练；OCR-Ric
 
 ![图47-2：VLM 数据三阶段流水线 (3-Stage VLM Data Engineering Pipeline)](../../images/part13/Cao-Chap47-Fig02-EN.svg)
 
-*图47-2：VLM 数据三阶段流水线 (3-Stage VLM Data Engineering Pipeline)*
+*图47-2：VLM 数据三阶段流水线*
 
 **阶段一：预训练（Pre-training / Feature Alignment）**
 
@@ -115,7 +115,7 @@ MiniCPM-V 提供了一个截然不同的数据配方范式：在总体规模受�
 
 ![图47-3：Native vs Dynamic Resolution 数据 pipeline 对比 (Resolution Handling)](../../images/part13/Cao-Chap47-Fig03-EN.svg)
 
-*图47-3：Native vs Dynamic Resolution 数据 pipeline 对比 (Resolution Handling)*
+*图47-3：原生分辨率与动态分辨率对比*
 
 **派系一：动态高分切片（Dynamic Hi-Res Patching / AnyRes）**
 
@@ -148,7 +148,7 @@ MiniCPM-V 提供了一个截然不同的数据配方范式：在总体规模受�
 
 ![图47-4：多模态指令合成 pipeline (Multi-modal Instruction Synthesis)](../../images/part13/Cao-Chap47-Fig04-EN.svg)
 
-*图47-4：多模态指令合成 pipeline (Multi-modal Instruction Synthesis)*
+*图47-4：多模态指令合成流水线*
 
 如图47-4 所示，多模态指令合成已经远超简单的"让 GPT-4V 看看图并造句"。一个现代的数据合成管线通常包含以下组件的协同：
 
@@ -325,7 +325,7 @@ InternVL 团队不仅开源了模型权重，还开源了百万级别的 SFT 高
 
 七条实施风险（§47.7）揭示了技术报告中普遍回避的工程细节，尤其是"适用边界"一节提醒读者：**最复杂的配方不一定是最适合的配方，始终以业务场景和团队资源约束为第一优先级**。
 
-当 VLM 通过本章所述的高标准数据配方，掌握了对物理世界与二维平面的"看图理解"能力后，它也就具备了理解视觉输入并驱动后续生成任务的基础。在下一章 **Ch48：多模态生成模型数据工程** 中，我们将视角转向生成任务，讨论当模型从"观察者"转向像素与视频生成时，数据配方将如何演进。
+当 VLM 通过本章所述的高标准数据配方，掌握了对物理世界与二维平面的"看图理解"能力后，它也就具备了理解视觉输入并驱动后续生成任务的基础。在下一章 **Ch48：生成式数据管线：FLUX 与 Wan** 中，我们将视角转向生成任务，讨论当模型从"观察者"转向像素与视频生成时，数据配方将如何演进。
 
 ## 参考文献
 

@@ -514,7 +514,7 @@ This folder is the publisher-facing Springer submission package generated from t
 | Folder | Purpose |
 | --- | --- |
 | `{SOURCE_DIR_NAME}` | English manuscript source files: LaTeX, Markdown backup, renamed figure files, and the alt-text Excel workbook. |
-| `{PDF_DIR_NAME}` | Complete book PDF and individual PDFs. Current full PDF count: {full_pdf_count}; individual PDF count: {chapter_pdf_count}. |
+| `{PDF_DIR_NAME}` | Complete book PDF in `Full_Manuscript_PDF/` and individual chapter/project/appendix PDFs in `Individual_Chapter_PDFs/`. Current full PDF count: {full_pdf_count}; individual PDF count: {chapter_pdf_count}. |
 | `{THIRD_PARTY_DIR_NAME}` | Author/editor-provided permissions and originality/rights confirmation copied as-is. |
 
 ## ZIP Scope

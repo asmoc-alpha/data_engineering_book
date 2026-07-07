@@ -403,7 +403,7 @@ dataloader = DataLoader(
 )
 ```
 
-*Listing 6-7: Multi-node distributed DataLoader configuration snippet. Production environments should combine rank-aware sharding, global shuffle, and token-count consistency checks*
+*Listing 6-7: Multi-node distributed DataLoader configuration*
 
 **Avoiding duplicate reads** is a common pitfall in multi-node distributed DataLoaders: if the DataLoaders across nodes are not properly partitioned in a rank-aware manner, each node will independently read the complete dataset, causing all nodes to see the same data order — gradient updates are effectively performed on repeated data, equivalent to batch size not correctly scaling with the number of nodes. For custom datasets that do not use `StreamingDataset`, `DistributedSampler` must be used, and `sampler.set_epoch(epoch)` must be called at the beginning of each epoch to ensure shuffle randomness differs across epochs.
 
