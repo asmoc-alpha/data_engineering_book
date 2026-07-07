@@ -117,19 +117,6 @@
          stop-color="#0f5f8c"
          id="stop8" />
     </linearGradient>
-    <filter
-       id="softShadow"
-       x="-0.019736842"
-       y="-0.019736842"
-       width="1.0394737"
-       height="1.0394737">
-      <feDropShadow
-         dx="0"
-         dy="3"
-         stdDeviation="3"
-         flood-color="#0f172a"
-         flood-opacity="0.22" />
-    </filter>
   </defs>
   <style
      id="style8">
@@ -818,7 +805,6 @@
        fill="#74bd7d"
        stroke="#ffffff"
        stroke-width="3"
-       filter="url(#softShadow)"
        id="circle67" />
     <ellipse
        cx="388"
@@ -869,7 +855,6 @@
        fill="#f2ba45"
        stroke="#ffffff"
        stroke-width="3"
-       filter="url(#softShadow)"
        id="circle70" />
     <rect
        x="638.9201"
@@ -919,7 +904,6 @@
        fill="#d93636"
        stroke="#ffffff"
        stroke-width="3"
-       filter="url(#softShadow)"
        id="circle73" />
     <rect
        x="450"
@@ -950,7 +934,6 @@
        fill="#a70b0b"
        stroke="#ffffff"
        stroke-width="4"
-       filter="url(#softShadow)"
        id="circle77" />
     <circle
        cx="971.3158"

@@ -1,9 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
     <!-- Definitions -->
     <defs>
-        <filter id="shadow" x="-5%" y="-5%" width="120%" height="120%">
-            <feDropShadow dx="3" dy="3" stdDeviation="3" flood-color="#cbd5e1" flood-opacity="0.8"/>
-        </filter>
     </defs>
 
     <!-- Background -->
@@ -119,7 +116,7 @@
     </g>
 
     <!-- Legend -->
-    <rect x="780" y="220" width="180" height="135" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" rx="4" filter="url(#shadow)" />
+    <rect x="780" y="220" width="180" height="135" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" rx="4" />
     <g font-family="Arial, sans-serif" font-size="14" fill="#334155">
         <rect x="795" y="235" width="24" height="14" fill="#BDE0FE" stroke="#60A5FA" stroke-width="1.5" />
         <text x="830" y="247" dy="0">General Web Text</text>

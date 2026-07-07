@@ -71,9 +71,6 @@
             <line x1="-16" y1="2" x2="-10" y2="2" stroke="currentColor" stroke-width="1.5"/>
         </g>
 
-        <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
-            <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.1" />
-        </filter>
     </defs>
 
     <!-- Background -->
@@ -89,13 +86,13 @@
     <path d="M 770 130 L 790 130 L 790 120 L 800 140 L 790 160 L 790 150 L 770 150 Z" fill="#8E44AD" />
 
     <!-- Column 1: SEED SELECTOR -->
-    <rect x="40" y="100" width="160" height="580" rx="12" fill="#EAF2F8" stroke="#2B5C8F" stroke-width="4" filter="url(#shadow)"/>
+    <rect x="40" y="100" width="160" height="580" rx="12" fill="#EAF2F8" stroke="#2B5C8F" stroke-width="4"/>
     <path d="M 42 112 Q 42 102 52 102 L 188 102 Q 198 102 198 112 L 198 180 L 42 180 Z" fill="#2B5C8F" />
     <text x="120" y="140" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#FFFFFF" text-anchor="middle">SEED</text>
     <text x="120" y="165" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#FFFFFF" text-anchor="middle">SELECTOR</text>
 
-    <use href="#icon-seed" x="120" y="220" transform="scale(2)" transform-origin="120 220" color="#2B5C8F"/>
-    <use href="#icon-seed" x="120" y="640" transform="scale(2)" transform-origin="120 640" color="#2B5C8F"/>
+    <use href="#icon-seed" transform="translate(120 220) scale(2)" color="#2B5C8F"/>
+    <use href="#icon-seed" transform="translate(120 640) scale(2)" color="#2B5C8F"/>
 
     <g font-family="Arial, sans-serif" font-size="16" fill="#1A2B3C">
         <!-- B1 -->
@@ -123,13 +120,13 @@
     </g>
 
     <!-- Column 2: INSTRUCTION GENERATOR -->
-    <rect x="230" y="100" width="160" height="580" rx="12" fill="#E9F5F5" stroke="#1E847F" stroke-width="4" filter="url(#shadow)"/>
+    <rect x="230" y="100" width="160" height="580" rx="12" fill="#E9F5F5" stroke="#1E847F" stroke-width="4"/>
     <path d="M 232 112 Q 232 102 242 102 L 378 102 Q 388 102 388 112 L 388 180 L 232 180 Z" fill="#1E847F" />
     <text x="310" y="140" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#FFFFFF" text-anchor="middle">INSTRUCTION</text>
     <text x="310" y="165" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#FFFFFF" text-anchor="middle">GENERATOR</text>
 
-    <use href="#icon-generator" x="310" y="220" transform="scale(2)" transform-origin="310 220" color="#1E847F"/>
-    <use href="#icon-generator" x="310" y="640" transform="scale(2)" transform-origin="310 640" color="#1E847F"/>
+    <use href="#icon-generator" transform="translate(310 220) scale(2)" color="#1E847F"/>
+    <use href="#icon-generator" transform="translate(310 640) scale(2)" color="#1E847F"/>
 
     <g font-family="Arial, sans-serif" font-size="16" fill="#0F423F">
         <circle cx="242" cy="270" r="4" fill="#1E847F"/>
@@ -161,13 +158,13 @@
     </g>
 
     <!-- Column 3: QUALITY SCORER -->
-    <rect x="420" y="100" width="160" height="580" rx="12" fill="#FEF5E7" stroke="#D68910" stroke-width="4" filter="url(#shadow)"/>
+    <rect x="420" y="100" width="160" height="580" rx="12" fill="#FEF5E7" stroke="#D68910" stroke-width="4"/>
     <path d="M 422 112 Q 422 102 432 102 L 568 102 Q 578 102 578 112 L 578 180 L 422 180 Z" fill="#D68910" />
     <text x="500" y="140" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#FFFFFF" text-anchor="middle">QUALITY</text>
     <text x="500" y="165" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#FFFFFF" text-anchor="middle">SCORER</text>
 
-    <use href="#icon-quality" x="500" y="220" transform="scale(2)" transform-origin="500 220" color="#D68910"/>
-    <use href="#icon-quality" x="500" y="640" transform="scale(2)" transform-origin="500 640" color="#D68910"/>
+    <use href="#icon-quality" transform="translate(500 220) scale(2)" color="#D68910"/>
+    <use href="#icon-quality" transform="translate(500 640) scale(2)" color="#D68910"/>
 
     <g font-family="Arial, sans-serif" font-size="16" fill="#6B4408">
         <circle cx="444" cy="270" r="4" fill="#D68910"/>
@@ -198,13 +195,13 @@
     </g>
 
     <!-- Column 4: LLM-AS-JUDGE -->
-    <rect x="610" y="100" width="160" height="580" rx="12" fill="#F4ECF7" stroke="#8E44AD" stroke-width="4" filter="url(#shadow)"/>
+    <rect x="610" y="100" width="160" height="580" rx="12" fill="#F4ECF7" stroke="#8E44AD" stroke-width="4"/>
     <path d="M 612 112 Q 612 102 622 102 L 758 102 Q 768 102 768 112 L 768 180 L 612 180 Z" fill="#8E44AD" />
     <text x="690" y="140" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#FFFFFF" text-anchor="middle">LLM-AS-</text>
     <text x="690" y="165" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#FFFFFF" text-anchor="middle">JUDGE</text>
 
-    <use href="#icon-judge" x="690" y="220" transform="scale(2)" transform-origin="690 220" color="#8E44AD"/>
-    <use href="#icon-judge" x="690" y="640" transform="scale(2)" transform-origin="690 640" color="#8E44AD"/>
+    <use href="#icon-judge" transform="translate(690 220) scale(2)" color="#8E44AD"/>
+    <use href="#icon-judge" transform="translate(690 640) scale(2)" color="#8E44AD"/>
 
     <g font-family="Arial, sans-serif" font-size="16" fill="#4A235A">
         <circle cx="629" cy="270" r="4" fill="#8E44AD"/>
@@ -234,13 +231,13 @@
     </g>
 
     <!-- Column 5: EXPANDER & PACKER -->
-    <rect x="800" y="100" width="160" height="580" rx="12" fill="#FDEDEC" stroke="#C0392B" stroke-width="4" filter="url(#shadow)"/>
+    <rect x="800" y="100" width="160" height="580" rx="12" fill="#FDEDEC" stroke="#C0392B" stroke-width="4"/>
     <path d="M 802 112 Q 802 102 812 102 L 948 102 Q 958 102 958 112 L 958 180 L 802 180 Z" fill="#C0392B" />
     <text x="880" y="140" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#FFFFFF" text-anchor="middle">EXPANDER</text>
     <text x="880" y="165" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#FFFFFF" text-anchor="middle">&amp; PACKER</text>
 
-    <use href="#icon-packer" x="880" y="220" transform="scale(2)" transform-origin="880 220" color="#C0392B"/>
-    <use href="#icon-delivery" x="880" y="640" transform="scale(2)" transform-origin="880 640" color="#C0392B"/>
+    <use href="#icon-packer" transform="translate(880 220) scale(2)" color="#C0392B"/>
+    <use href="#icon-delivery" transform="translate(880 640) scale(2)" color="#C0392B"/>
 
     <g font-family="Arial, sans-serif" font-size="16" fill="#641E16">
         <circle cx="819" cy="270" r="4" fill="#C0392B"/>

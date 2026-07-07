@@ -47,13 +47,6 @@
       <stop offset="1" stop-color="#5485c9"/>
     </linearGradient>
 
-    <filter id="softShadow" x="-12%" y="-18%" width="124%" height="136%">
-      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#94b7dc" flood-opacity="0.16"/>
-    </filter>
-    <filter id="tinyShadow" x="-25%" y="-25%" width="150%" height="150%">
-      <feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#7da7ce" flood-opacity="0.18"/>
-    </filter>
-
     <style>
       .title {
         font-family: "Inter", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -145,14 +138,14 @@
   </g>
 
   <!-- Outer layout panels -->
-  <rect class="panel" x="50" y="32" width="975" height="856" rx="18" filter="url(#softShadow)"/>
-  <rect class="panel" x="1044" y="32" width="449" height="856" rx="18" filter="url(#softShadow)"/>
+  <rect class="panel" x="50" y="32" width="975" height="856" rx="18"/>
+  <rect class="panel" x="1044" y="32" width="449" height="856" rx="18"/>
 
   <text class="title" x="537.5" y="78" text-anchor="middle">DataGallery Core</text>
   <text class="title" x="1268.5" y="78" text-anchor="middle">Data-Studio &amp; Data-Ops</text>
 
   <!-- Left: Data Intelligence Framework -->
-  <rect class="card" x="77" y="103" width="922" height="402" rx="12" filter="url(#tinyShadow)"/>
+  <rect class="card" x="77" y="103" width="922" height="402" rx="12"/>
   <g transform="translate(111 115)">
     <rect width="56" height="56" rx="11" fill="url(#cyanIcon)"/>
     <path class="line-art-thin" d="M19 17 L36 24 L35 40 L18 34 Z"/>
@@ -198,7 +191,7 @@
   <text class="label" x="826" y="462" text-anchor="middle">Privacy-aware Routing</text>
 
   <!-- Left: Semantic Distributed Runtime -->
-  <rect class="card" x="77" y="515" width="922" height="174" rx="12" filter="url(#tinyShadow)"/>
+  <rect class="card" x="77" y="515" width="922" height="174" rx="12"/>
   <g transform="translate(111 522)">
     <rect width="50" height="50" rx="10" fill="url(#orangeIcon)"/>
     <path class="white-fill" d="M25 10 L39 17 L25 24 L11 17 Z"/>
@@ -216,7 +209,7 @@
   <text class="label" x="831.5" y="660" text-anchor="middle">Metric Registry</text>
 
   <!-- Left: Data System Service -->
-  <rect class="card" x="77" y="699" width="922" height="173" rx="12" filter="url(#tinyShadow)"/>
+  <rect class="card" x="77" y="699" width="922" height="173" rx="12"/>
   <g transform="translate(111 708)">
     <rect width="50" height="50" rx="10" fill="url(#purpleIcon)"/>
     <path class="line-art-thin" d="M25 10 L38 17.5 L38 32.5 L25 40 L12 32.5 L12 17.5 Z"/>
@@ -234,7 +227,7 @@
   <text class="label" x="831.5" y="842" text-anchor="middle">Agent UI / Web</text>
 
   <!-- Right: Data Studio -->
-  <rect class="card" x="1067" y="104" width="399" height="413" rx="12" filter="url(#tinyShadow)"/>
+  <rect class="card" x="1067" y="104" width="399" height="413" rx="12"/>
   <g transform="translate(1090 130)">
     <rect width="56" height="56" rx="11" fill="url(#blueIcon)"/>
     <path class="line-art-thin" d="M28 14 C18 14 12 21 12 29 C12 38 20 44 29 44 L34 44 C37 44 39 42 39 39 C39 36 37 35 34 35 L32 35 C30 35 29 34 29 32 C29 30 31 29 33 29 L38 29 C42 29 44 26 43 23 C41 18 36 14 28 14 Z"/>
@@ -253,7 +246,7 @@
   <text class="label" x="1266" y="470" text-anchor="middle">Business Process</text>
 
   <!-- Right: Data Ops -->
-  <rect class="card" x="1067" y="533" width="399" height="332" rx="12" filter="url(#tinyShadow)"/>
+  <rect class="card" x="1067" y="533" width="399" height="332" rx="12"/>
   <g transform="translate(1090 553)">
     <rect width="56" height="56" rx="11" fill="url(#roseIcon)"/>
     <circle class="line-art-thin" cx="28" cy="28" r="15"/>
@@ -268,9 +261,9 @@
   <text class="label" x="1266" y="805" text-anchor="middle">Observation</text>
 
   <!-- Bottom foundation row -->
-  <rect class="panel" x="50" y="903" width="452" height="88" rx="14" filter="url(#tinyShadow)"/>
-  <rect class="panel" x="519" y="903" width="480" height="88" rx="14" filter="url(#tinyShadow)"/>
-  <rect class="panel" x="1017" y="903" width="476" height="88" rx="14" filter="url(#tinyShadow)"/>
+  <rect class="panel" x="50" y="903" width="452" height="88" rx="14"/>
+  <rect class="panel" x="519" y="903" width="480" height="88" rx="14"/>
+  <rect class="panel" x="1017" y="903" width="476" height="88" rx="14"/>
 
   <g transform="translate(121 917)">
     <rect width="60" height="60" rx="12" fill="url(#blueIcon)"/>

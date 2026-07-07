@@ -15,9 +15,6 @@
         <marker id="arrowhead" markerWidth="24" markerHeight="16" refX="22" refY="8" orient="auto" markerUnits="userSpaceOnUse">
             <polygon points="0 0, 24 8, 0 16" fill="#0f172a" />
         </marker>
-        <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
-            <feDropShadow dx="4" dy="4" stdDeviation="4" flood-color="#cbd5e1" flood-opacity="0.5"/>
-        </filter>
     </defs>
 
     <line x1="50" y1="90" x2="850" y2="90" stroke="url(#spectrumGrad)" stroke-width="8" marker-end="url(#arrowhead)"/>
@@ -27,7 +24,7 @@
     <text x="850" y="75" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#0f172a" text-anchor="end">Low Transparency</text>
 
     <!-- Box 1: White-box -->
-    <rect x="30" y="120" width="260" height="260" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="2" filter="url(#shadow)"/>
+    <rect x="30" y="120" width="260" height="260" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
     <rect x="30" y="120" width="260" height="50" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
     <rect x="30" y="150" width="260" height="20" fill="#f8fafc" /> <!-- Cover bottom radius of header -->
     <line x1="30" y1="170" x2="290" y2="170" stroke="#cbd5e1" stroke-width="2"/>
@@ -44,7 +41,7 @@
     <text x="80" y="350" font-family="Arial, sans-serif" font-size="14" fill="#64748b">OLMo, Amber</text>
 
     <!-- Box 2: Grey-box -->
-    <rect x="320" y="120" width="260" height="260" rx="12" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2" filter="url(#shadow)"/>
+    <rect x="320" y="120" width="260" height="260" rx="12" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2"/>
     <rect x="320" y="120" width="260" height="50" rx="12" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
     <rect x="320" y="150" width="260" height="20" fill="#e2e8f0" />
     <line x1="320" y1="170" x2="580" y2="170" stroke="#94a3b8" stroke-width="2"/>
@@ -61,7 +58,7 @@
     <text x="370" y="350" font-family="Arial, sans-serif" font-size="14" fill="#64748b">Llama-3, Qwen2.5, DeepSeek</text>
 
     <!-- Box 3: Black-box -->
-    <rect x="610" y="120" width="260" height="260" rx="12" fill="#1e293b" stroke="#0f172a" stroke-width="2" filter="url(#shadow)"/>
+    <rect x="610" y="120" width="260" height="260" rx="12" fill="#1e293b" stroke="#0f172a" stroke-width="2"/>
     <rect x="610" y="120" width="260" height="50" rx="12" fill="#0f172a" stroke="#0f172a" stroke-width="2"/>
     <rect x="610" y="150" width="260" height="20" fill="#0f172a" />
     <line x1="610" y1="170" x2="870" y2="170" stroke="#334155" stroke-width="2"/>

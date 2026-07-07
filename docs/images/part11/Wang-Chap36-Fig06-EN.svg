@@ -126,32 +126,6 @@
          fill="#d93636"
          id="path8" />
     </marker>
-    <filter
-       id="softShadow"
-       x="-0.010638298"
-       y="-0.010638298"
-       width="1.0212766"
-       height="1.0212766">
-      <feDropShadow
-         dx="0"
-         dy="3"
-         stdDeviation="4"
-         flood-color="#0f172a"
-         flood-opacity="0.18" />
-    </filter>
-    <filter
-       id="redGlow"
-       x="-0.0025"
-       y="-0.0075757576"
-       width="1.005"
-       height="1.0151515">
-      <feDropShadow
-         dx="0"
-         dy="0"
-         stdDeviation="7"
-         flood-color="#ef4444"
-         flood-opacity="0.72" />
-    </filter>
   </defs>
   <style
      id="style8">
@@ -279,7 +253,6 @@
      id="ellipse22" />
   <g
      class="font"
-     filter="url(#softShadow)"
      id="g24">
     <circle
        cx="800"
@@ -360,7 +333,6 @@
        fill="url(#panelBlue)"
        stroke="#8eb1c6"
        stroke-width="2.06254"
-       filter="url(#softShadow)"
        id="rect28"
        transform="matrix(1,0,0,0.94027651,0,14.31488)"
        style="fill:url(#panelBlue)" />
@@ -425,7 +397,6 @@
        fill="url(#alertFill)"
        stroke="#d97706"
        stroke-width="2"
-       filter="url(#redGlow)"
        id="rect31" />
     <path
        d="M1060 313 L1088 361 H1032 Z"
@@ -480,7 +451,6 @@
        fill="#edf8f4"
        stroke="#8fc9b0"
        stroke-width="2.08341"
-       filter="url(#softShadow)"
        id="rect35"
        transform="matrix(1,0,0,0.92153012,0,42.970246)" />
     <path
@@ -534,7 +504,6 @@
        fill="#ede9fe"
        stroke="#7c3aed"
        stroke-width="2.18028"
-       filter="url(#softShadow)"
        id="rect37"
        transform="matrix(1,0,0,0.8414669,0,86.813007)" />
     <circle
@@ -594,7 +563,6 @@
        fill="#ecfdf3"
        stroke="#65a30d"
        stroke-width="2.1225"
-       filter="url(#softShadow)"
        id="rect40"
        transform="matrix(1,0,0,0.88790017,0,35.154706)" />
     <rect

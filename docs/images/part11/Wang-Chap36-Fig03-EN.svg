@@ -125,32 +125,6 @@
          fill="#d93636"
          id="path8" />
     </marker>
-    <filter
-       id="softShadow"
-       x="-0.017857143"
-       y="-0.019230769"
-       width="1.0357143"
-       height="1.0384615">
-      <feDropShadow
-         dx="0"
-         dy="3"
-         stdDeviation="3"
-         flood-color="#0f172a"
-         flood-opacity="0.22" />
-    </filter>
-    <filter
-       id="orangeGlow"
-       x="-0.0044776119"
-       y="-0.0079787234"
-       width="1.0089552"
-       height="1.0159574">
-      <feDropShadow
-         dx="0"
-         dy="0"
-         stdDeviation="6"
-         flood-color="#f59e0b"
-         flood-opacity="0.72" />
-    </filter>
     <linearGradient
        inkscape:collect="always"
        xlink:href="#shieldBlue"
@@ -808,7 +782,6 @@
          id="tspan39">Engineering</tspan></text>
     <!-- Gate 3 shield highlighted -->
     <g
-       filter="url(#orangeGlow)"
        id="g41" />
     <text
        x="897"
@@ -989,7 +962,6 @@
        fill="#f8fafc"
        stroke="#155f93"
        stroke-width="3"
-       filter="url(#softShadow)"
        id="rect54" />
     <rect
        x="116"
@@ -1104,7 +1076,6 @@
        fill="#f8fafc"
        stroke="#155f93"
        stroke-width="3"
-       filter="url(#softShadow)"
        id="rect61" />
     <rect
        x="445"
@@ -1204,7 +1175,6 @@
        fill="#fff7ed"
        stroke="#d97706"
        stroke-width="3"
-       filter="url(#orangeGlow)"
        id="rect69" />
     <rect
        x="820"
@@ -1326,7 +1296,6 @@
        fill="#f8fafc"
        stroke="#155f93"
        stroke-width="3"
-       filter="url(#softShadow)"
        id="rect80" />
     <rect
        x="1208"
@@ -1610,7 +1579,6 @@
        fill="#d93636"
        stroke="#b82020"
        stroke-width="3"
-       filter="url(#softShadow)"
        id="rect108" />
     <path
        d="m 822,584 28,49 h -56 z"

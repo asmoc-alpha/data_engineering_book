@@ -34,9 +34,6 @@
         </marker>
         
         <!-- Soft Shadow -->
-        <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
-            <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.1" />
-        </filter>
     </defs>
 
     <!-- Background -->
@@ -76,17 +73,17 @@
     <!-- MAIN BLOCKS -->
     
     <!-- Block 1: Multi-source Sampler -->
-    <rect x="80" y="225" width="150" height="150" rx="12" fill="#C9E2FA" stroke="#5D8EBE" stroke-width="2.5" filter="url(#shadow)"/>
+    <rect x="80" y="225" width="150" height="150" rx="12" fill="#C9E2FA" stroke="#5D8EBE" stroke-width="2.5"/>
     <g font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#1E2B4D" text-anchor="middle">
         <text x="155" y="290">Multi-source</text>
         <text x="155" y="320">Sampler</text>
     </g>
 
     <!-- Arrow 1 -->
-    <path d="M 235 285 L 255 285 L 255 275 L 275 300 L 255 325 L 255 315 L 235 315 Z" fill="#ADC9EA" stroke="#6794CD" stroke-width="1.5" filter="url(#shadow)"/>
+    <path d="M 235 285 L 255 285 L 255 275 L 275 300 L 255 325 L 255 315 L 235 315 Z" fill="#ADC9EA" stroke="#6794CD" stroke-width="1.5"/>
 
     <!-- Block 2: Deduplication -->
-    <rect x="280" y="180" width="160" height="240" rx="12" fill="#C1E8CE" stroke="#52A674" stroke-width="2.5" filter="url(#shadow)"/>
+    <rect x="280" y="180" width="160" height="240" rx="12" fill="#C1E8CE" stroke="#52A674" stroke-width="2.5"/>
     <g font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#1E2B4D" text-anchor="middle">
         <text x="360" y="235">Cross-source</text>
         <text x="360" y="265">MinHash</text>
@@ -104,12 +101,12 @@
     </g>
 
     <!-- Arrow 2 (Widened Gap) -->
-    <path d="M 445 285 L 510 285 L 510 275 L 540 300 L 510 325 L 510 315 L 445 315 Z" fill="#ADD8BE" stroke="#67AB83" stroke-width="1.5" filter="url(#shadow)"/>
+    <path d="M 445 285 L 510 285 L 510 275 L 540 300 L 510 325 L 510 315 L 445 315 Z" fill="#ADD8BE" stroke="#67AB83" stroke-width="1.5"/>
     <text x="495" y="340" font-family="Arial, sans-serif" font-size="13" fill="#1E2B4D" text-anchor="middle">De-duplicated</text>
     <text x="495" y="355" font-family="Arial, sans-serif" font-size="13" fill="#1E2B4D" text-anchor="middle">Data</text>
 
     <!-- Block 3: Tokenizer (Shifted Right) -->
-    <rect x="560" y="180" width="120" height="240" rx="12" fill="#FDE1B8" stroke="#D68910" stroke-width="2.5" filter="url(#shadow)"/>
+    <rect x="560" y="180" width="120" height="240" rx="12" fill="#FDE1B8" stroke="#D68910" stroke-width="2.5"/>
     <g font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#1E2B4D" text-anchor="middle">
         <text x="620" y="255">Tokenizer</text>
         <text x="620" y="285">Training</text>
@@ -127,10 +124,10 @@
     </g>
 
     <!-- Arrow 3 (Shifted Right) -->
-    <path d="M 685 285 L 705 285 L 705 275 L 725 300 L 705 325 L 705 315 L 685 315 Z" fill="#F7D2A7" stroke="#DCA060" stroke-width="1.5" filter="url(#shadow)"/>
+    <path d="M 685 285 L 705 285 L 705 275 L 725 300 L 705 325 L 705 315 L 685 315 Z" fill="#F7D2A7" stroke="#DCA060" stroke-width="1.5"/>
 
     <!-- Block 4: Pack & Shuffle (Shifted Right) -->
-    <rect x="740" y="180" width="100" height="240" rx="12" fill="#E0CBE6" stroke="#8E44AD" stroke-width="2.5" filter="url(#shadow)"/>
+    <rect x="740" y="180" width="100" height="240" rx="12" fill="#E0CBE6" stroke="#8E44AD" stroke-width="2.5"/>
     <g font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#1E2B4D" text-anchor="middle">
         <text x="790" y="255">Pack &amp;</text>
         <text x="790" y="285">Shuffle</text>

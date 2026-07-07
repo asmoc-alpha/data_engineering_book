@@ -3,9 +3,6 @@
         <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
             <path d="M 0 0 L 10 5 L 0 10 z" fill="#555555" />
         </marker>
-        <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
-            <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.1" />
-        </filter>
     </defs>
 
     <!-- Background -->
@@ -95,7 +92,7 @@
     <line x1="830" y1="600" x2="830" y2="645" stroke="#555555" stroke-width="3" marker-end="url(#arrow)" />
 
     <!-- Final Box: Dataset -->
-    <rect x="730" y="650" width="200" height="110" rx="6" fill="#D1D5DB" stroke="#9CA3AF" stroke-width="2" filter="url(#shadow)" />
+    <rect x="730" y="650" width="200" height="110" rx="6" fill="#D1D5DB" stroke="#9CA3AF" stroke-width="2" />
     <g font-family="Arial, sans-serif" font-size="22" fill="#000000" text-anchor="middle">
         <text x="830" y="683">High-Quality</text>
         <text x="830" y="713">MM Instruction</text>
