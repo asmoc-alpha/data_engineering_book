@@ -71,7 +71,7 @@ Table P07-1 summarizes the corresponding comparison and engineering consideratio
 
 ## Cost, Risk, and Compliance Boundaries
 
-Costs arise primarily from trajectory generation, execution simulation, and manual sampling; risks concentrate around misconfigured tool permissions, non-executable trajectories, and post-training misuse. When external data, personal information, copyrighted content, or third-party services are involved, source documentation, permission status, anonymization strategy, call records, and manual review records should be retained. Risk identification may reference the NIST AI RMF (NIST 2023) and OWASP LLM Application Risk List (OWASP Foundation 2025); observability of execution trajectories and call logs may follow OpenTelemetry recording practices (OpenTelemetry Authors 2026).
+Costs arise primarily from trajectory generation, execution simulation, and manual sampling; risks concentrate around misconfigured tool permissions, non-executable trajectories, and post-training misuse. When external data, personal information, copyrighted content, or third-party services are involved, source documentation, permission status, anonymization strategy, call records, and manual review records should be retained. Risk identification may reference the NIST Artificial Intelligence Risk Management Framework (NIST AI RMF; NIST 2023) and OWASP LLM Application Risk List (OWASP Foundation 2025); observability of execution trajectories and call logs may follow OpenTelemetry recording practices (OpenTelemetry Authors 2026).
 
 ## Common Failure Modes
 

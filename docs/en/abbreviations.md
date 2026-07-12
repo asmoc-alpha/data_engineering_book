@@ -19,15 +19,20 @@ This page lists high-frequency technical abbreviations used throughout the book 
 | CPU | Central Processing Unit | Central processing unit | Part I, Part II |
 | CSV | Comma-Separated Values | Comma-separated text format | Part I |
 | ETL | Extract, Transform, Load | Extract, transform, and load | Part I, Part VIII |
+| GDPR | General Data Protection Regulation | European Union data-protection regulation | Part I, Part XI, Part XIV |
 | GPU | Graphics Processing Unit | Graphics processing unit | Part I, Part III, Part X, Part XI |
 | GUID | Globally Unique Identifier | Globally unique identifier | Part II |
 | HDFS | Hadoop Distributed File System | Hadoop distributed file system | Part I, Part X |
 | H100 | NVIDIA H100 GPU | NVIDIA H100 accelerator | Part I |
+| I/O | Input/Output | Input and output operations | Part I, Part II |
 | JSON | JavaScript Object Notation | Structured data interchange format | Part I, Part III, Part IV, Part X, Part XI |
 | JSONL | JSON Lines | Line-delimited JSON text format | Part I, Part III, Part IV, Part X |
 | KPI | Key Performance Indicator | Key performance indicator | Part IV, Part VIII |
 | LLM | Large Language Model | Large language model | Whole book |
 | MLOps | Machine Learning Operations | Machine-learning engineering and operations system | Part I, Part VIII |
+| NER | Named Entity Recognition | Named-entity recognition | Part I, Part II |
+| NIST AI RMF | NIST Artificial Intelligence Risk Management Framework | NIST framework for managing artificial-intelligence risks | Part IV, Part XIV, Appendix B |
+| NLP | Natural Language Processing | Natural-language processing | Part III, Part IV, Part V |
 | PDF | Portable Document Format | Portable document format | Part I, Part III, Part VII, Part X, Part XI |
 | PII | Personally Identifiable Information | Personally identifiable information | Part II, Part IX, Part X |
 | ROI | Return on Investment | Return on investment | Part I, Part VIII |
@@ -44,11 +49,13 @@ This page lists high-frequency technical abbreviations used throughout the book 
 | Abbreviation | Full Name | Description | Main Locations |
 | --- | --- | --- | --- |
 | DataOps | Data Operations | Data operations and data-engineering operations system | Part II, Part VIII, Part X |
+| BPE | Byte Pair Encoding | Subword tokenization algorithm | Part I, Part II, Part XIV |
 | DOM | Document Object Model | Document object model | Part III, Part XI |
 | DVC | Data Version Control | Data version control tool or method | Part I, Part II, Part VIII |
 | FAISS | Facebook AI Similarity Search | Vector similarity search library | Part VII |
 | FastText | FastText | Lightweight text representation and classification tool | Part II |
 | LakeFS | LakeFS | Version management system for data lakes | Part I, Part VIII |
+| LSH | Locality-Sensitive Hashing | Approximate-similarity hashing method | Part I, Part II |
 | MATTR | Moving-Average Type-Token Ratio | Moving-average type-token ratio | Part II |
 | MFU | Model FLOPs Utilization | Model FLOPs utilization | Part II |
 | MinHash | Min-wise Independent Permutations Hashing | Approximate deduplication method based on min-wise hashing | Part I, Part II, Part XI |
@@ -70,8 +77,9 @@ This page lists high-frequency technical abbreviations used throughout the book 
 | DPO | Direct Preference Optimization | Direct preference optimization | Part IV, Part XI |
 | LoRA | Low-Rank Adaptation | Low-rank adaptation fine-tuning method | Part XI |
 | PPO | Proximal Policy Optimization | Proximal policy optimization | Part IV, Part XI |
+| PEFT | Parameter-Efficient Fine-Tuning | Parameter-efficient fine-tuning methods | Part XI |
 | PRM | Process Reward Model | Process reward model | Part IV, Part VI, Part X, Part XI |
-| QA | Quality Assurance | Quality assurance | Part IV, Part X |
+| QA | Quality Assurance / Question Answering | Quality assurance or question answering, according to context | Part IV, Part VII, Part X |
 | RAG | Retrieval-Augmented Generation | Retrieval-augmented generation | Part VII, Part X |
 | RL | Reinforcement Learning | Reinforcement learning | Part IV, Part XI |
 | RLAIF | Reinforcement Learning from AI Feedback | Reinforcement learning from AI feedback | Part IV |
@@ -121,3 +129,7 @@ This page lists high-frequency technical abbreviations used throughout the book 
 | P99 | 99th Percentile | 99th percentile metric | Part II |
 | P99.9 | 99.9th Percentile | 99.9th percentile metric | Part II |
 | RoPA | Record of Processing Activities | Record of processing activities | Part IX |
+| ABAC | Attribute-Based Access Control | Attribute-based access control | Part IX, Part XI |
+| MCP | Model Context Protocol | Protocol for connecting models to tools and contextual resources | Part X, Part XIV, Appendix G |
+| NL2SQL | Natural Language to SQL | Translation from natural-language requests to SQL | Part X, Part XIV, Appendix G |
+| RBAC | Role-Based Access Control | Role-based access control | Part IX, Part XI |

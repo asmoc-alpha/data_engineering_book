@@ -14,7 +14,7 @@ Data asset catalog; metadata governance; dataset registry; data lineage; permiss
 
 - Distinguish data assets from file inventories, and characterize a data asset along six dimensions: identity and ownership, structural schema, lineage and transformation, permissions and security, quality and confidence, and lifecycle.
 - Design a layered metadata model for a Dataset Registry, and explain automated collection and search-discovery mechanisms using datasheet conventions.
-- Construct a governance framework encompassing data lineage, RBAC and ABAC access control, and state-machine-based lifecycle management.
+- Construct a governance framework encompassing data lineage, role-based access control (RBAC), attribute-based access control (ABAC), and state-machine-based lifecycle management.
 - Assess an organization's data governance maturity, identify role responsibilities, and implement an actionable governance checklist.
 - Explain how the decoupling of data from its context leads to data cascade failures and the associated engineering costs.
 

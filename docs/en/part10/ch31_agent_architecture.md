@@ -310,7 +310,7 @@ Table 31-5 summarizes the corresponding comparison and engineering consideration
 | Architecture layer | DataAgent capability | Meaning for data engineering agents |
 | --- | --- | --- |
 | Planner | FlexAgent, ReAct main agent, `SCENARIO`, task prompts | Convert business questions into executable steps and decide when to call tools or sub-agents |
-| Tool Executor | `TOOLS.local_functions`, MCP tools, A2A tools, `nl2sql_sub_agent_tool` | Register tool calls explicitly and avoid bypassing tool boundaries |
+| Tool Executor | `TOOLS.local_functions`, Model Context Protocol (MCP) tools, agent-to-agent (A2A) tools, `nl2sql_sub_agent_tool` | Register tool calls explicitly and avoid bypassing tool boundaries |
 | Verifier | NL2SQL Validator, SQL explain, metadata match, executor preview | Add structured checks before SQL execution and answer interpretation |
 | Human Gate | Human feedback nodes, approval workflows, external approval systems | Keep high-risk queries, writes, and cross-system triggers under human confirmation |
 | Memory | Context, message history, history writer, memory indexer | Preserve session state, historical decisions, and reusable context |

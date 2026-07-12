@@ -42,7 +42,7 @@ Root cause: Perplexity (PPL) measures "linguistic distribution plausibility"—a
 **Scenario 3: Product Manager vs. Algorithm Researcher**
 
 > **Product Manager**: "The model is frequently hallucinating on users' financial questions online. Yesterday a user asked about a stock's dividend for this year, and the model confidently produced incorrect data from last year."
-> **Algorithm Researcher**: "On our internal benchmark evaluation set, this model performs better than the previous version on financial knowledge QA."
+> **Algorithm Researcher**: "On our internal benchmark evaluation set, this model performs better than the previous version on financial knowledge question answering (QA)."
 
 Root cause: The internal evaluation set's financial knowledge has a cutoff date from the previous year, while users online are asking about real-time information. The quality dimension of **timeliness (Staleness)** was simply not designed into the internal evaluation.
 

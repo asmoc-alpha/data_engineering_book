@@ -290,7 +290,7 @@ Figure 37-8 illustrates the corresponding workflow or structure.
 
 ### 37.4.3 Federated Fine-Tuning
 
-For large models, more systems use federated fine-tuning rather than full-parameter federated training. The reason is practical: full-parameter training is communication-heavy, costly, and exposes a larger privacy surface. Federated fine-tuning often combines PEFT methods such as LoRA, Adapter, and Prefix Tuning, exchanging smaller adapter parameters across institutions rather than all base-model weights (Hu et al. 2022; Kuang et al. 2024).
+For large models, more systems use federated fine-tuning rather than full-parameter federated training. The reason is practical: full-parameter training is communication-heavy, costly, and exposes a larger privacy surface. Federated fine-tuning often combines parameter-efficient fine-tuning (PEFT) methods such as Low-Rank Adaptation (LoRA), Adapter, and Prefix Tuning, exchanging smaller adapter parameters across institutions rather than all base-model weights (Hu et al. 2022; Kuang et al. 2024).
 
 This brings two benefits. First, communication cost falls sharply, making multi-institution deployment more realistic. Second, local institutions keep more control over the base model and private corpus while sharing fewer parameter updates. Federated fine-tuning is likely to become a mainstream pattern for cross-institutional large-model collaboration.
 

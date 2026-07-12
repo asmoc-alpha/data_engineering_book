@@ -20,7 +20,7 @@ Image-text pairs; interleaved image-text; CLIP Score; SigLIP; AnyRes; image clea
 
 ## 8.1 Why Multimodal Data Is Harder Than Text
 
-When an NLP data engineer first takes over a data-cleaning task for a vision-language model (VLM), the most immediate change is this: many deterministic rules that work well for pure text cover only a small fraction of problems in images.
+When a natural language processing (NLP) data engineer first takes over a data-cleaning task for a vision-language model (VLM), the most immediate change is this: many deterministic rules that work well for pure text cover only a small fraction of problems in images.
 
 ### 8.1.1 The Hidden and Uncertain Nature of Visual Noise
 
