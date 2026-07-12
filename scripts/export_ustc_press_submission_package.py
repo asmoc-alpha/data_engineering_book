@@ -233,6 +233,7 @@ def install_ustc_render_overrides() -> None:
 
 
 def ustc_preamble(stats: zh_latex.ExportStats) -> str:
+    authors = zh_latex.chinese_book_authors()
     return rf"""
 \documentclass[UTF8,openany,10pt]{{ctexbook}}
 \usepackage[paperwidth=185mm,paperheight=260mm,top=22mm,bottom=21mm,left=18mm,right=18mm,headheight=14pt]{{geometry}}
@@ -260,6 +261,7 @@ def ustc_preamble(stats: zh_latex.ExportStats) -> str:
 \definecolor{{tablehead}}{{RGB}}{{238,243,248}}
 \definecolor{{codeframe}}{{RGB}}{{190,198,210}}
 \DefineVerbatimEnvironment{{printcode}}{{Verbatim}}{{breaklines=true,breakanywhere=true,fontsize=\scriptsize,frame=single,framesep=2mm,rulecolor=\color{{codeframe}}}}
+\newenvironment{{bookcaption}}{{\par\begingroup\small\centering}}{{\par\endgroup}}
 \setlist{{nosep,leftmargin=2em}}
 \setlength{{\parindent}}{{2em}}
 \setlength{{\parskip}}{{0.25em}}
@@ -276,7 +278,7 @@ def ustc_preamble(stats: zh_latex.ExportStats) -> str:
 \sloppy
 
 \title{{大模型数据工程：架构、算法及项目实战}}
-\author{{於俊、陈长汶、于璠、王聪、骆阳、张然、杜文卓、徐鑫、王柯、汪志立、刘中一、曹旭宏、穆冠霖、刘冠君、邹月峰、徐霖、陈新宇、陈凤欣、李轩、Gongpeng Zhao、王灿、Feng Zhao、Ye Yu、Fang Gao、Jiaen Liang、Wei Huang、Shengping Liu、Qingsong Liu、Jianqing Sun}}
+\author{{{authors}}}
 \date{{中国科学技术大学出版社中文送审稿\\LaTeX 分章节源文件包\\生成文件数：{stats.files}；图片：{stats.images}；代码块：{stats.code_blocks}；表格：{stats.tables}}}
 """
 
@@ -374,6 +376,7 @@ def input_line(path: Path) -> str:
 
 
 def build_wrapper(input_paths: list[Path], stats: zh_latex.ExportStats) -> str:
+    authors = zh_latex.chinese_book_authors()
     contributors_index = next(
         (index for index, path in enumerate(input_paths) if path.name.endswith("-contributors.tex")),
         len(input_paths),
@@ -408,7 +411,7 @@ def build_wrapper(input_paths: list[Path], stats: zh_latex.ExportStats) -> str:
             r"\vspace{6mm}",
             r"{\Large\bfseries 架构、算法及项目实战\par}",
             r"\vspace{22mm}",
-            r"{\large\begin{minipage}{0.88\textwidth}\centering 於俊、陈长汶、于璠、王聪、骆阳、张然、杜文卓、徐鑫、王柯、汪志立、刘中一、曹旭宏、穆冠霖、刘冠君、邹月峰、徐霖、陈新宇、陈凤欣、李轩、Gongpeng Zhao、王灿、Feng Zhao、Ye Yu、Fang Gao、Jiaen Liang、Wei Huang、Shengping Liu、Qingsong Liu、Jianqing Sun\end{minipage}\par}",
+            rf"{{\large\begin{{minipage}}{{0.88\textwidth}}\centering {authors}\end{{minipage}}\par}}",
             r"\vfill",
             rf"{{\large 中国科学技术大学出版社中文送审稿\par LaTeX 分章节源文件包\par 生成文件数：{stats.files}；图片：{stats.images}；代码块：{stats.code_blocks}；表格：{stats.tables}\par}}",
             r"\end{titlepage}",

@@ -36,6 +36,7 @@ ACCESSIBILITY_DIR = ROOT / "publishing" / "accessibility"
 LATEX_EXPORT_SCRIPT = ROOT / "scripts" / "export_en_book_latex.py"
 PRINT_FIGURES_SCRIPT = ROOT / "scripts" / "export_print_figures.py"
 PRINT_FIGURES_DIR = ROOT / "output" / "springer_print_figures"
+TRANSLATION_AUXILIARY_DOCS = {"translation-status.md", "translation-style-guide.md"}
 
 SOURCE_DIR_NAME = "01_Source_Files"
 PDF_DIR_NAME = "02_PDF_Files"
@@ -147,6 +148,12 @@ def should_skip_path(path: Path) -> bool:
 
 def ignore_system_files(_dir: str, names: list[str]) -> set[str]:
     return {name for name in names if name == ".DS_Store" or name == "__MACOSX" or name.startswith("._")}
+
+
+def ignore_markdown_source_files(_dir: str, names: list[str]) -> set[str]:
+    ignored = ignore_system_files(_dir, names)
+    ignored.update(name for name in names if name in TRANSLATION_AUXILIARY_DOCS)
+    return ignored
 
 
 def copy_tree(src: Path, dst: Path, ignore=None) -> None:
@@ -424,7 +431,7 @@ def rewrite_markdown_package_image_paths(package_dir: Path) -> None:
 
 def copy_markdown_sources(package_dir: Path) -> None:
     source_root = package_dir / SOURCE_DIR_NAME
-    copy_tree(ROOT / "docs" / "en", source_root / "Markdown" / "docs_en")
+    copy_tree(ROOT / "docs" / "en", source_root / "Markdown" / "docs_en", ignore=ignore_markdown_source_files)
     rewrite_markdown_package_image_paths(package_dir)
     copy_tree(LATEX_PARTS_DIR, source_root / "LaTeX" / "parts")
     copy_tree(LATEX_CHAPTERS_DIR, source_root / "LaTeX" / "chapters")

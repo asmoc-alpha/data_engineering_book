@@ -395,7 +395,7 @@ def flatten_nav(nodes: list[Any], level: int = 1) -> list[NavItem]:
 def prepare_latex_items(items: list[NavItem]) -> list[NavItem]:
     """Return the formal LaTeX sequence, excluding web-only pages."""
 
-    excluded = {"index.md", "translation-status.md"}
+    excluded = {"index.md", "translation-status.md", "translation-style-guide.md"}
     filtered = [item for item in items if item.path not in excluded]
     front_order = {
         "title_page.md": 0,
@@ -489,7 +489,7 @@ def group_items(items: list[NavItem]) -> list[tuple[str, list[NavItem]]]:
 
 
 def is_submission_latex_unit(item: NavItem) -> bool:
-    if item.path in {"index.md", "translation-status.md"}:
+    if item.path in {"index.md", "translation-status.md", "translation-style-guide.md"}:
         return False
     if not re.search(r"part\d+/", item.path) and not item.path.startswith("appendix_") and item.path != "afterword.md":
         return False

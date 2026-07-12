@@ -199,7 +199,7 @@ LLM 数据栈要同时管理三种性质截然不同的数据，每种数据对�
 
 对于需要多引擎协同和对象存储扩展性的 LLM 数据工程场景，**Apache Iceberg** (Apache Software Foundation 2024) **+ S3**是常见的优先候选方案，原因是其引擎中立性——它允许工程团队同时以 Spark 执行海量清洗处理、以 DuckDB 进行轻量数据探查分析，而无需迁移数据，也不受单一商业厂商锁定。
 
-**向量数据（Embeddings）**是第二类存储需求，主要服务于 RAG（检索增强生成）场景。向量数据库的核心职责是将海量文本 Chunk 转化为高维稠密向量并建立索引，支持高效的近似最近邻（ANN）检索 (Malkov and Yashunin 2020)。目前主流的向量数据库有 Milvus（开源，支持大规模分布式部署）、Qdrant（Rust 实现，性能较强，轻量部署友好）和 Weaviate（内置多模态向量支持，Schema 友好）等。选型时的核心决策因素是：向量数量规模（100 万以下 vs 亿级）、是否需要 Hybrid Search（稠密向量 + BM25 (Robertson and Zaragoza 2009) 稀疏检索的混合）、以及运维团队对分布式系统的运维能力。
+**向量数据（Embeddings）**是第二类存储需求，主要服务于 RAG 场景。向量数据库的核心职责是将海量文本 Chunk 转化为高维稠密向量并建立索引，支持高效的近似最近邻（Approximate Nearest Neighbor，ANN）检索 (Malkov and Yashunin 2020)。目前主流的向量数据库有 Milvus（开源，支持大规模分布式部署）、Qdrant（Rust 实现，性能较强，轻量部署友好）和 Weaviate（内置多模态向量支持，Schema 友好）等。选型时的核心决策因素是：向量数量规模（100 万以下 vs 亿级）、是否需要 Hybrid Search（稠密向量 + Best Matching 25，BM25 (Robertson and Zaragoza 2009) 稀疏检索的混合）、以及运维团队对分布式系统的运维能力。
 
 **模型 Checkpoint 与实验产物**是第三类，包括训练过程中保存的模型权重文件（动辄数百 GB）、TensorBoard 或 W&B 的训练日志、以及 Tokenizer 配置等。这类数据量大、访问频率不均匀（训练中频繁写入，训练后几乎只读），适合以对象存储为主存储，配合 DVC（Data Version Control）(DVC 2024) 或 MLflow Artifacts 做版本追踪。
 

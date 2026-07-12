@@ -10,6 +10,8 @@ exclude_docs: |
   zh/superpowers/**
   en/superpowers/**
   ja/superpowers/**
+  **/translation-status.md
+  **/translation-style-guide.md
 
 # 仓库信息 (右上角显示 GitHub 图标)
 repo_name: GitHub
@@ -212,7 +214,6 @@ plugins:
             - Table of Contents: index.md
             - Contributors: contributors.md
             - Abbreviations: abbreviations.md
-            - English Edition Status: translation-status.md
             - "Part I: Overview and Infrastructure":
                 - "Part Overview": part1/index.md
                 - "Chapter 1: Data Revolution for Large Language Models": part1/ch01_data_change.md
@@ -337,7 +338,6 @@ plugins:
           nav:
             - 目次: index.md
             - 序文: preface.md
-            - 中国語2026年版の翻訳状況: translation-status.md
 
 # 构建钩子：旧章节路径生成跳转页（保护外链）
 hooks:

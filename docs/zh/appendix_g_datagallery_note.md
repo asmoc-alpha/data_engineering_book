@@ -4,7 +4,7 @@
 
 本附录用于说明 DataGallery 在本书项目十五及相关 Agent 数据工程实践中的位置。DataGallery 的公开开源入口位于 GitCode：[https://gitcode.com/datagallery](https://gitcode.com/datagallery)。本附录不是 DataGallery 或 DataAgent 的安装手册，也不替代对应仓库中的 README、示例配置、依赖说明和发布记录；读者在复现实验或接入工程系统时，应以公开仓库、具体 tag、commit 和项目文档为准。
 
-在本书语境中，DataGallery 更适合被理解为围绕 Data + AI 实践组织的一组开源工程入口，而不是单一工具名称。项目十五使用 DataAgent 构建企业级语义问数助手，其核心问题并不是“如何调用一个模型生成 SQL”，而是如何把业务问题、语义层、NL2SQL 子 Agent、工具调用、workspace 资产、运行轨迹和服务接口组织成可复查的数据工程系统。DataGallery 提供公开组织和项目入口，DataAgent 则是本书最直接引用的工程项目。
+在本书语境中，DataGallery 更适合被理解为围绕 Data + AI 实践组织的一组开源工程入口，而不是单一工具名称。项目十五使用 DataAgent 构建企业级语义问数助手，其核心问题并不是“如何调用一个模型生成 SQL”，而是如何把业务问题、语义层、自然语言到 SQL（Natural Language to SQL，NL2SQL）子 Agent、工具调用、workspace 资产、运行轨迹和服务接口组织成可复查的数据工程系统。DataGallery 提供公开组织和项目入口，DataAgent 则是本书最直接引用的工程项目。
 
 因此，本附录重点讨论 DataGallery 与数据工程方法之间的关系：如何把书中关于 Agent、Tool-Use、语义层、DataOps、复现和治理的内容，落到可运行、可审计、可迭代的开源项目中。对于具体 API、启动命令、配置文件字段和依赖版本，本附录只给出使用原则，不展开逐项教程。
 
@@ -50,7 +50,7 @@ DataAgent 是当前较适合读者复现 DataGallery 工程思想的开源项目
 
 第三层是 **Agent 编排层**。项目包含灵活 Agent 运行时、规划与执行节点、hooks、上下文管理、历史持久化、轨迹工具和 workspace 组织能力。对读者来说，这些组件解释了为什么企业数据助手不是一个 LLM prompt，而是一个需要决策、调用、观察、修正和保留证据的运行时系统。
 
-第四层是 **数据行动层**。仓库中包含本地工具、MCP 工具、A2A 工具、语义工具、SQL reader、sandbox、文档召回，以及 NL2SQL 专用的 perceptor、generator、validator、reflector、executor、selector 等节点。这些模块把自然语言意图连接到受控的数据操作。
+第四层是 **数据行动层**。仓库中包含本地工具、模型上下文协议（Model Context Protocol，MCP）工具、A2A 工具、语义工具、SQL reader、sandbox、文档召回，以及 NL2SQL 专用的 perceptor、generator、validator、reflector、executor、selector 等节点。这些模块把自然语言意图连接到受控的数据操作。
 
 第五层是 **场景与文档层**。示例配置覆盖 quickstart、NL2SQL 子 Agent、数据分析、电商、制造、金融类场景和 ontology 相关案例；文档覆盖安装、快速开始、数据库部署、Semantic Service、架构、API、应用案例和里程碑。这使 DataAgent 不只是代码仓库，也是可教学、可审计的项目资产。
 

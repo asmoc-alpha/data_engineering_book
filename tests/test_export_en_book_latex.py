@@ -39,6 +39,7 @@ class ExportEnglishBookLatexTest(unittest.TestCase):
         self.assertIn("appendix_f_terminology_and_chinese_english_mapping.md", paths)
         self.assertNotIn("index.md", paths)
         self.assertNotIn("translation-status.md", paths)
+        self.assertNotIn("translation-style-guide.md", paths)
 
     def test_english_latex_document_has_book_metadata_and_front_matter(self):
         exporter = load_exporter()

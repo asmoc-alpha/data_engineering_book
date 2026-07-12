@@ -43,6 +43,7 @@ OUT_PDF = OUT_DIR / "data_engineering_book_zh_16k_latex.pdf"
 OUT_WARNINGS = OUT_DIR / "data_engineering_book_zh_16k_latex_warnings.txt"
 ASSET_DIR = OUT_DIR / "latex_assets"
 PARTS_DIR = OUT_DIR / "data_engineering_book_zh_16k_latex_parts"
+TITLE_PAGE = DOCS_ZH / "title_page.md"
 
 SUPPORTED_IMAGE_SUFFIXES = {".png", ".jpg", ".jpeg", ".pdf"}
 UNSUPPORTED_IMAGE_SUFFIXES = {".svg", ".gif", ".webp"}
@@ -123,6 +124,20 @@ class AssetManager:
         rel = f"latex_assets/{target_name}"
         self._seen[image_path] = rel
         return rel
+
+
+def chinese_book_authors() -> str:
+    """Read the Chinese author list from the manuscript title page."""
+
+    lines = TITLE_PAGE.read_text(encoding="utf-8").splitlines()
+    for index, line in enumerate(lines):
+        if line.strip().rstrip("  ") != "**作者**":
+            continue
+        for author_line in lines[index + 1 :]:
+            author_line = author_line.strip()
+            if author_line:
+                return author_line
+    raise ValueError(f"Chinese author list not found in {TITLE_PAGE.relative_to(ROOT)}")
 
 
 def detect_image_suffix(image_path: Path) -> str | None:
@@ -442,6 +457,25 @@ def render_code_block(language: str, body: list[str], stats: ExportStats) -> str
     )
 
 
+PUBLICATION_CAPTION_RE = re.compile(
+    r"^\*{0,2}\s*(?:图|表|代码清单)\s*(?:FM|P\d{1,2}|[A-Z]|\d+)\s*[-—－]\s*\d+\s*[:：].+?\s*\*{0,2}$"
+)
+
+
+def render_publication_caption(line: str) -> str | None:
+    stripped = line.strip()
+    if not PUBLICATION_CAPTION_RE.match(stripped):
+        return None
+    caption = re.sub(r"^\*{1,2}|\*{1,2}$", "", stripped).strip()
+    return "\n".join(
+        [
+            r"\begin{bookcaption}",
+            inline_to_latex(caption),
+            r"\end{bookcaption}",
+        ]
+    )
+
+
 def render_list(lines: list[str], ordered: bool) -> str:
     env = "enumerate" if ordered else "itemize"
     rendered = [rf"\begin{{{env}}}"]
@@ -490,6 +524,12 @@ def markdown_to_latex(text: str, source_file: Path, assets: AssetManager, stats:
 
         if stripped == "---":
             out.append(r"\par\noindent\rule{\linewidth}{0.3pt}\par")
+            i += 1
+            continue
+
+        publication_caption = render_publication_caption(stripped)
+        if publication_caption is not None:
+            out.append(publication_caption)
             i += 1
             continue
 
@@ -579,6 +619,7 @@ def markdown_to_latex(text: str, source_file: Path, assets: AssetManager, stats:
 
 
 def latex_preamble(stats: ExportStats) -> str:
+    authors = chinese_book_authors()
     return rf"""
 \documentclass[UTF8,openany,10pt]{{ctexbook}}
 \usepackage[paperwidth=185mm,paperheight=260mm,top=22mm,bottom=21mm,left=18mm,right=18mm,headheight=14pt]{{geometry}}
@@ -603,6 +644,7 @@ def latex_preamble(stats: ExportStats) -> str:
 \definecolor{{tablehead}}{{RGB}}{{238,243,248}}
 \definecolor{{codeframe}}{{RGB}}{{190,198,210}}
 \DefineVerbatimEnvironment{{printcode}}{{Verbatim}}{{breaklines=true,breakanywhere=true,fontsize=\scriptsize,frame=single,framesep=2mm,rulecolor=\color{{codeframe}}}}
+\newenvironment{{bookcaption}}{{\par\begingroup\small\centering}}{{\par\endgroup}}
 \setlist{{nosep,leftmargin=2em}}
 \setlength{{\parindent}}{{2em}}
 \setlength{{\parskip}}{{0.25em}}
@@ -611,8 +653,8 @@ def latex_preamble(stats: ExportStats) -> str:
 \sloppy
 
 \title{{大模型数据工程：架构、算法及项目实战}}
-\author{{於俊、陈长汶、于璠、王聪、骆阳、张然、杜文卓、徐鑫、王柯、汪志立、刘中一、曹旭宏、穆冠霖、刘冠君、邹月峰、徐霖、陈新宇、陈凤欣、李轩、Gongpeng Zhao、王灿、Feng Zhao、Ye Yu、Fang Gao、Jiaen Liang、Wei Huang、Shengping Liu、Qingsong Liu、Jianqing Sun}}
-\date{{Springer 16K LaTeX 审校样稿\\生成文件数：{stats.files}；图片：{stats.images}；代码块：{stats.code_blocks}；表格：{stats.tables}}}
+\author{{{authors}}}
+\date{{中文 LaTeX 审校样稿\\生成文件数：{stats.files}；图片：{stats.images}；代码块：{stats.code_blocks}；表格：{stats.tables}}}
 """
 
 

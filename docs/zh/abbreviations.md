@@ -17,15 +17,20 @@
 | CPU | Central Processing Unit | 中央处理器 | 第一篇、第二篇 |
 | CSV | Comma-Separated Values | 逗号分隔文本格式 | 第一篇 |
 | ETL | Extract, Transform, Load | 抽取、转换、加载 | 第一篇、第八篇 |
+| GDPR | General Data Protection Regulation | 欧盟《通用数据保护条例》 | 第一篇、第十一篇、第十四篇 |
 | GPU | Graphics Processing Unit | 图形处理器 | 第一篇、第三篇、第十篇、第十一篇 |
 | GUID | Globally Unique Identifier | 全局唯一标识符 | 第二篇 |
 | HDFS | Hadoop Distributed File System | Hadoop 分布式文件系统 | 第一篇、第十篇 |
 | H100 | NVIDIA H100 GPU | 英伟达 H100 加速卡 | 第一篇 |
+| I/O | Input/Output | 输入 / 输出 | 第一篇、第二篇 |
 | JSON | JavaScript Object Notation | 结构化数据交换格式 | 第一篇、第三篇、第四篇、第十篇、第十一篇 |
 | JSONL | JSON Lines | 按行存储 JSON 的文本格式 | 第一篇、第三篇、第四篇、第十篇 |
 | KPI | Key Performance Indicator | 关键绩效指标 | 第四篇、第八篇 |
 | LLM | Large Language Model | 大语言模型 | 全书 |
 | MLOps | Machine Learning Operations | 机器学习工程运维体系 | 第一篇、第八篇 |
+| NER | Named Entity Recognition | 命名实体识别 | 第一篇、第二篇 |
+| NIST AI RMF | NIST Artificial Intelligence Risk Management Framework | 美国国家标准与技术研究院人工智能风险管理框架 | 第四篇、第十四篇、附录B |
+| NLP | Natural Language Processing | 自然语言处理 | 第三篇、第四篇、第五篇 |
 | PDF | Portable Document Format | 便携式文档格式 | 第一篇、第三篇、第七篇、第十篇、第十一篇 |
 | PII | Personally Identifiable Information | 个人身份识别信息 | 第二篇、第九篇、第十篇 |
 | ROI | Return on Investment | 投资回报率 | 第一篇、第八篇 |
@@ -40,11 +45,13 @@
 | 缩写 | 英文全称 | 中文说明 | 主要出现篇章 |
 | --- | --- | --- | --- |
 | DataOps | Data Operations | 数据运营与数据工程运维体系 | 第二篇、第八篇、第十篇 |
+| BPE | Byte Pair Encoding | 字节对编码 | 第一篇、第二篇、第十四篇 |
 | DOM | Document Object Model | 文档对象模型 | 第三篇、第十一篇 |
 | DVC | Data Version Control | 数据版本控制工具 / 方法 | 第一篇、第二篇、第八篇 |
 | FAISS | Facebook AI Similarity Search | 向量相似度检索库 | 第七篇 |
 | FastText | FastText | 轻量文本表示与分类工具 | 第二篇 |
 | LakeFS | LakeFS | 面向数据湖的版本管理系统 | 第一篇、第八篇 |
+| LSH | Locality-Sensitive Hashing | 局部敏感哈希 | 第一篇、第二篇 |
 | MATTR | Moving-Average Type-Token Ratio | 移动平均词型-词次比指标 | 第二篇 |
 | MFU | Model FLOPs Utilization | 模型浮点运算利用率 | 第二篇 |
 | MinHash | Min-wise Independent Permutations Hashing | 最小哈希近似去重方法 | 第一篇、第二篇、第十一篇 |
@@ -64,8 +71,9 @@
 | DPO | Direct Preference Optimization | 直接偏好优化 | 第四篇、第十一篇 |
 | LoRA | Low-Rank Adaptation | 低秩适配微调方法 | 第十一篇 |
 | PPO | Proximal Policy Optimization | 近端策略优化 | 第四篇、第十一篇 |
+| PEFT | Parameter-Efficient Fine-Tuning | 参数高效微调 | 第十一篇 |
 | PRM | Process Reward Model | 过程奖励模型 | 第四篇、第六篇、第十篇、第十一篇 |
-| QA | Quality Assurance | 质量保障 | 第四篇、第十篇 |
+| QA | Quality Assurance / Question Answering | 质量保障 / 问答；按上下文区分 | 第四篇、第七篇、第十篇 |
 | RAG | Retrieval-Augmented Generation | 检索增强生成 | 第七篇、第十篇 |
 | RL | Reinforcement Learning | 强化学习 | 第四篇、第十一篇 |
 | RLAIF | Reinforcement Learning from AI Feedback | 基于 AI 反馈的强化学习 | 第四篇 |
@@ -111,3 +119,7 @@
 | P99 | 99th Percentile | 第 99 百分位指标 | 第二篇 |
 | P99.9 | 99.9th Percentile | 第 99.9 百分位指标 | 第二篇 |
 | RoPA | Record of Processing Activities | 处理活动记录 | 第九篇 |
+| ABAC | Attribute-Based Access Control | 基于属性的访问控制 | 第九篇、第十一篇 |
+| MCP | Model Context Protocol | 模型上下文协议 | 第十篇、第十四篇、附录G |
+| NL2SQL | Natural Language to SQL | 自然语言到 SQL | 第十篇、第十四篇、附录G |
+| RBAC | Role-Based Access Control | 基于角色的访问控制 | 第九篇、第十一篇 |
