@@ -1,6 +1,6 @@
 # 第34章：DataOps Agent 与平台自治
 
-<div class="chapter-authors">骆阳（Yang Luo）；汪志立（Zhili Wang）；於俊（Jun Yu）</div>
+<div class="chapter-authors">骆阳；汪志立；於俊</div>
 
 ---
 

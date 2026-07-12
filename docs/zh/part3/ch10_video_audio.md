@@ -1,6 +1,6 @@
 # 第10章 视频与音频数据工程
 
-<div class="chapter-authors">王柯（Ke Wang）；王聪（Cong Wang）；於俊（Jun Yu）</div>
+<div class="chapter-authors">王柯；王聪；於俊</div>
 
 ## 摘要
 

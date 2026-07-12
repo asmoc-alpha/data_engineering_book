@@ -1,6 +1,6 @@
 # 第28章：数据产品化与数据契约
 
-<div class="chapter-authors">刘中一（Zhongyi Liu）；Ye Yu；杜文卓（Wenzhuo Du）</div>
+<div class="chapter-authors">刘中一；余烨；杜文卓</div>
 
 ## 摘要
 

@@ -1,6 +1,6 @@
 # 第9章 重标注与文档理解
 
-<div class="chapter-authors">於俊（Jun Yu）；王柯（Ke Wang）；王聪（Cong Wang）</div>
+<div class="chapter-authors">於俊；王柯；王聪</div>
 
 ## 摘要
 

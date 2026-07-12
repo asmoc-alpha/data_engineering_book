@@ -1,6 +1,6 @@
 # 第41章：视觉推理工程：图表与工具
 
-<div class="chapter-authors">徐霖（Lin Xu）；陈新宇（Xinyu Chen）</div>
+<div class="chapter-authors">徐麟；陈新宇</div>
 
 ## 摘要
 

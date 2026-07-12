@@ -1,6 +1,6 @@
 # 第22章：多模态 RAG 与视觉检索
 
-<div class="chapter-authors">杜文卓（Wenzhuo Du）；Gongpeng Zhao；於俊（Jun Yu）</div>
+<div class="chapter-authors">杜文卓；赵功鹏；於俊</div>
 
 ## 摘要
 

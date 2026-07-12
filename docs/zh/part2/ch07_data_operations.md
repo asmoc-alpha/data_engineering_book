@@ -1,6 +1,6 @@
 # 第7章 数据评估、质量闭环与运营迭代
 
-<div class="chapter-authors">王柯（Ke Wang）；于璠；於俊（Jun Yu）</div>
+<div class="chapter-authors">王柯；于璠；於俊</div>
 
 ## 摘要
 

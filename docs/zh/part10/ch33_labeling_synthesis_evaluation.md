@@ -1,6 +1,6 @@
 # 第33章：标注、合成与评测 Agent
 
-<div class="chapter-authors">汪志立（Zhili Wang）；刘中一（Zhongyi Liu）；於俊（Jun Yu）</div>
+<div class="chapter-authors">汪志立；刘中一；於俊</div>
 
 ---
 

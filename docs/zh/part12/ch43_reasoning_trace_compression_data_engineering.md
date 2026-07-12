@@ -1,6 +1,6 @@
 # 第43章：推理轨迹工程：压缩与掩码
 
-<div class="chapter-authors">李轩（Xuan Li）；陈凤欣（Fengxin Chen）</div>
+<div class="chapter-authors">李轩；陈凤欣</div>
 
 ## 摘要
 

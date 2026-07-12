@@ -1,6 +1,6 @@
 # 第21章：RAG 数据流水线
 
-<div class="chapter-authors">杜文卓（Wenzhuo Du）；Gongpeng Zhao；於俊（Jun Yu）</div>
+<div class="chapter-authors">杜文卓；赵功鹏；於俊</div>
 
 ## 摘要
 

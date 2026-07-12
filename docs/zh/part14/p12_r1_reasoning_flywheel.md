@@ -1,6 +1,6 @@
 # 项目十二：教学化 R1 推理数据飞轮
 
-<div class="chapter-authors">王聪（Cong Wang）；徐鑫（Xin Xu）；骆阳（Yang Luo）</div>
+<div class="chapter-authors">王聪；徐鑫；骆阳</div>
 
 ## 摘要
 

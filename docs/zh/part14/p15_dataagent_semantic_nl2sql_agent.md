@@ -1,6 +1,6 @@
 # 项目十五：DataAgent 企业级语义问数助手
 
-<div class="chapter-authors">曹旭宏（Xuhong Cao）；刘中一（Zhongyi Liu）；於俊（Jun Yu）</div>
+<div class="chapter-authors">曹旭宏；刘中一；於俊</div>
 
 ## 摘要
 本章以 DataAgent 为项目实战对象，构建一个面向企业结构化数据的语义问数助手。项目目标不是让模型直接“猜 SQL”，而是把自然语言问题、业务语义层、数据库元数据、NL2SQL 子 Agent、结果文件、报告生成和运行审计组织成一条可复用的数据工程链路。

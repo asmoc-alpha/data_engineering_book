@@ -1,6 +1,6 @@
 # 项目六：思维链推理数据集构建与过程奖励模型训练
 
-<div class="chapter-authors">王聪（Cong Wang）；徐鑫（Xin Xu）；王柯（Ke Wang）</div>
+<div class="chapter-authors">王聪；徐鑫；王柯</div>
 
 ## 摘要
 P06 聚焦把推理过程本身组织成可训练、可验证、可分析、可迭代的过程监督数据资产。章节重点不在单条思维链展示，而在 step 级监督、奖励分配和 PRM 训练接口之间的工程化衔接。

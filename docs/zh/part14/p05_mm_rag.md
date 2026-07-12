@@ -1,6 +1,6 @@
 # 项目五：多模态 RAG 企业财报助手
 
-<div class="chapter-authors">曹旭宏（Xuhong Cao）；王柯（Ke Wang）；於俊（Jun Yu）</div>
+<div class="chapter-authors">曹旭宏；王柯；於俊</div>
 
 ## 摘要
 P05 聚焦把企业财报、招股书等复杂 PDF 文档组织成一条可检索、可解释、可评测的多模态 RAG 流水线。章节重点不在单次问答，而在把页面视觉结构、图表信息和正文语义共同纳入检索与回答过程。

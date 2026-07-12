@@ -1,6 +1,6 @@
 # 第47章：视觉语言配方：Qwen-VL 与 InternVL
 
-<div class="chapter-authors">曹旭宏（Xuhong Cao）；王柯（Ke Wang）；Qingsong Liu</div>
+<div class="chapter-authors">曹旭宏；王柯；刘青松</div>
 
 ## 摘要
 

@@ -1,6 +1,6 @@
 # 第26章：数据平台可观测性
 
-<div class="chapter-authors">杜文卓（Wenzhuo Du）；王灿（Can Wang）；於俊（Jun Yu）</div>
+<div class="chapter-authors">杜文卓；王灿；於俊</div>
 
 ---
 

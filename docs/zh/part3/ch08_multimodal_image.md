@@ -1,6 +1,6 @@
 # 第8章 图文对数据工程
 
-<div class="chapter-authors">於俊（Jun Yu）；王柯（Ke Wang）；王聪（Cong Wang）</div>
+<div class="chapter-authors">於俊；王柯；王聪</div>
 
 ## 摘要
 

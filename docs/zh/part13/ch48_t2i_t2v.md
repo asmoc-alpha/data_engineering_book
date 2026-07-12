@@ -1,6 +1,6 @@
 # 第48章：生成式数据管线：FLUX 与 Wan
 
-<div class="chapter-authors">张然（Ran Zhang）；Jianqing Sun；于璠</div>
+<div class="chapter-authors">张然；孙见青；于璠</div>
 
 ## 摘要
 

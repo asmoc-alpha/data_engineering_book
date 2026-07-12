@@ -1,6 +1,6 @@
 # 第14章：标注平台与质量保障
 
-<div class="chapter-authors">张然（Ran Zhang）；骆阳（Yang Luo）；於俊（Jun Yu）</div>
+<div class="chapter-authors">张然；骆阳；於俊</div>
 
 ## 摘要
 

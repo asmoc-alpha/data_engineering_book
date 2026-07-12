@@ -28,17 +28,17 @@ ORCID：https://orcid.org/0000-0002-3197-8103
 
 汪志立 -- 中国科学技术大学，合肥，中国。邮箱：wang.z.l@mail.ustc.edu.cn。ORCID：https://orcid.org/0009-0005-9467-3584。
 
-刘中一 -- University of Illinois Urbana-Champaign, Urbana, IL, USA。邮箱：zyaireliu@outlook.com。ORCID：https://orcid.org/0000-0002-9646-5907。
+刘中一 -- 伊利诺伊大学厄巴纳-香槟分校，美国伊利诺伊州厄巴纳。邮箱：zyaireliu@outlook.com。ORCID：https://orcid.org/0000-0002-9646-5907。
 
-曹旭宏 -- Northwestern University, Evanston, IL, USA。邮箱：xuhongcao216@gmail.com。ORCID：https://orcid.org/0009-0005-2137-4188。
+曹旭宏 -- 西北大学，美国伊利诺伊州埃文斯顿。邮箱：xuhongcao216@gmail.com。ORCID：https://orcid.org/0009-0005-2137-4188。
 
 穆冠霖 -- 中国科学技术大学，合肥，中国。邮箱：muguanlin@mail.ustc.edu.cn。ORCID：https://orcid.org/0009-0007-5758-2661。
 
-刘冠君 -- 中国科学技术大学，合肥，中国。邮箱：liuguanjun666@mail.ustc.edu.cn。ORCID：https://orcid.org/0009-0006-6109-7012。
+刘冠钧 -- 中国科学技术大学，合肥，中国。邮箱：liuguanjun666@mail.ustc.edu.cn。ORCID：https://orcid.org/0009-0006-6109-7012。
 
-邹月峰 -- 中国科学技术大学，合肥，中国。邮箱：zouyuefeng.00@mail.ustc.edu.cn。ORCID：https://orcid.org/0009-0000-6651-6067。
+邹越峰 -- 中国科学技术大学，合肥，中国。邮箱：zouyuefeng.00@mail.ustc.edu.cn。ORCID：https://orcid.org/0009-0000-6651-6067。
 
-徐霖 -- 中国科学技术大学，合肥，中国。邮箱：lxu_1@mail.ustc.edu.cn。ORCID：https://orcid.org/0009-0008-0288-1047。
+徐麟 -- 中国科学技术大学，合肥，中国。邮箱：lxu_1@mail.ustc.edu.cn。ORCID：https://orcid.org/0009-0008-0288-1047。
 
 陈新宇 -- 中国科学技术大学，合肥，中国。邮箱：cxy020228@mail.ustc.edu.cn。ORCID：https://orcid.org/0009-0009-0213-9579。
 
@@ -46,22 +46,22 @@ ORCID：https://orcid.org/0000-0002-3197-8103
 
 李轩 -- 中国科学技术大学，合肥，中国。邮箱：lixuancc@mail.ustc.edu.cn。ORCID：https://orcid.org/0009-0009-7889-3906。
 
-Gongpeng Zhao -- Alibaba Group，中国。邮箱：zhaogongpeng.z@alibaba-inc.com。ORCID：https://orcid.org/0009-0000-6651-6067。
+赵功鹏 -- 阿里巴巴集团，中国。邮箱：zhaogongpeng.z@alibaba-inc.com。ORCID：https://orcid.org/0009-0000-6651-6067。
 
 王灿 -- 浙江大学，杭州，中国。邮箱：18606518909@163.com。ORCID：https://orcid.org/0009-0005-0644-1776。
 
-Feng Zhao -- Xi'an University of Posts and Telecommunications，西安，中国。邮箱：zhaofeng201@xupt.edu.cn。ORCID：https://orcid.org/0000-0002-0323-9573。
+赵凤 -- 西安邮电大学，西安，中国。邮箱：zhaofeng201@xupt.edu.cn。ORCID：https://orcid.org/0000-0002-0323-9573。
 
-Ye Yu -- Hefei University of Technology，合肥，中国。邮箱：yuye@hfut.edu.cn。ORCID：https://orcid.org/0000-0002-8646-8426。
+余烨 -- 合肥工业大学，合肥，中国。邮箱：yuye@hfut.edu.cn。ORCID：https://orcid.org/0000-0002-8646-8426。
 
-Fang Gao -- Guangxi University，南宁，中国。邮箱：fgao@gxu.edu.cn。ORCID：https://orcid.org/0000-0003-1816-5420。
+高放 -- 广西大学，南宁，中国。邮箱：fgao@gxu.edu.cn。ORCID：https://orcid.org/0000-0003-1816-5420。
 
-Jiaen Liang -- Unisound AI Technology Co., Ltd.，中国。邮箱：liangjiaen@unisound.com。ORCID：https://orcid.org/0009-0001-8309-1301。
+梁家恩 -- 云知声智能科技股份有限公司，中国。邮箱：liangjiaen@unisound.com。ORCID：https://orcid.org/0009-0001-8309-1301。
 
-Wei Huang -- Unisound AI Technology Co., Ltd.，中国。邮箱：huangwei@unisound.com。ORCID：https://orcid.org/0009-0009-6416-7604。
+黄伟 -- 云知声智能科技股份有限公司，中国。邮箱：huangwei@unisound.com。ORCID：https://orcid.org/0009-0009-6416-7604。
 
-Shengping Liu -- Unisound AI Technology Co., Ltd.，中国。邮箱：liushengping@unisound.com。ORCID：https://orcid.org/0009-0008-7640-7022。
+刘升平 -- 云知声智能科技股份有限公司，中国。邮箱：liushengping@unisound.com。ORCID：https://orcid.org/0009-0008-7640-7022。
 
-Qingsong Liu -- Unisound AI Technology Co., Ltd.，中国。邮箱：liuqingsong@unisound.com。ORCID：https://orcid.org/0009-0004-1208-3031。
+刘青松 -- 云知声智能科技股份有限公司，中国。邮箱：liuqingsong@unisound.com。ORCID：https://orcid.org/0009-0004-1208-3031。
 
-Jianqing Sun -- Unisound AI Technology Co., Ltd.，中国。邮箱：sunjianqing@unisound.com。ORCID：https://orcid.org/0009-0007-3598-8564。
+孙见青 -- 云知声智能科技股份有限公司，中国。邮箱：sunjianqing@unisound.com。ORCID：https://orcid.org/0009-0007-3598-8564。

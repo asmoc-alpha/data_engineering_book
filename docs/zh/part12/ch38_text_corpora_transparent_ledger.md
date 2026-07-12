@@ -1,6 +1,6 @@
 # 第38章：文本语料工程：Web 与溯源账本
 
-<div class="chapter-authors">穆冠霖（Guanlin Mu）；曹旭宏（Xuhong Cao）</div>
+<div class="chapter-authors">穆冠霖；曹旭宏</div>
 
 ## 摘要
 

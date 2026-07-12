@@ -1,6 +1,6 @@
 # 第13章：偏好数据与奖励信号
 
-<div class="chapter-authors">於俊（Jun Yu）；张然（Ran Zhang）；骆阳（Yang Luo）</div>
+<div class="chapter-authors">於俊；张然；骆阳</div>
 
 ## 摘要
 

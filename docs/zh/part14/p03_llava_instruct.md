@@ -1,6 +1,6 @@
 # 项目三：LLaVA 多模态指令数据工厂
 
-<div class="chapter-authors">於俊（Jun Yu）；徐鑫（Xin Xu）；杜文卓（Wenzhuo Du）</div>
+<div class="chapter-authors">於俊；徐鑫；杜文卓</div>
 
 ## 摘要
 P03 聚焦把图像、区域标注、光学字符识别（OCR）信息和多图关系加工成可训练、可质检、可封装的多模态监督数据资产。章节重点不在单张图片问答，而在多模态资产到训练样本的工程化转化过程。

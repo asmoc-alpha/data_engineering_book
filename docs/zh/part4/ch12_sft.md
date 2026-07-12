@@ -1,6 +1,6 @@
 # 第12章：监督微调数据设计与指令体系
 
-<div class="chapter-authors">於俊（Jun Yu）；张然（Ran Zhang）；骆阳（Yang Luo）</div>
+<div class="chapter-authors">於俊；张然；骆阳</div>
 
 ## 章前导读
 

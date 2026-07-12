@@ -1,6 +1,6 @@
 # 项目十四：视频生成数据流水线
 
-<div class="chapter-authors">骆阳（Yang Luo）；张然（Ran Zhang）；杜文卓（Wenzhuo Du）</div>
+<div class="chapter-authors">骆阳；张然；杜文卓</div>
 
 ## 摘要
 

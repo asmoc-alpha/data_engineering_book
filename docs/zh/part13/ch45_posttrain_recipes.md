@@ -1,6 +1,6 @@
 # 第45章：LLM 后训练配方：SFT 与偏好
 
-<div class="chapter-authors">王聪（Cong Wang）；徐鑫（Xin Xu）；Wei Huang</div>
+<div class="chapter-authors">王聪；徐鑫；黄伟</div>
 
 ## 摘要
 

@@ -1,6 +1,6 @@
 # 第40章：文档表格工程：稀疏表格
 
-<div class="chapter-authors">刘冠君（Guanjun Liu）；邹月峰（Yuefeng Zou）</div>
+<div class="chapter-authors">刘冠钧；邹越峰</div>
 
 ## 摘要
 

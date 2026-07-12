@@ -1,6 +1,6 @@
 # 第6章 分词、序列化与高效加载
 
-<div class="chapter-authors">王柯（Ke Wang）；于璠；於俊（Jun Yu）</div>
+<div class="chapter-authors">王柯；于璠；於俊</div>
 
 ## 摘要
 

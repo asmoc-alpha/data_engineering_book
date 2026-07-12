@@ -1,6 +1,6 @@
 # 第11章 跨模态对齐与融合
 
-<div class="chapter-authors">王柯（Ke Wang）；王聪（Cong Wang）；於俊（Jun Yu）</div>
+<div class="chapter-authors">王柯；王聪；於俊</div>
 
 ## 摘要
 

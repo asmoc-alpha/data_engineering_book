@@ -1,6 +1,6 @@
 # 项目八：企业级 DataOps 平台
 
-<div class="chapter-authors">於俊（Jun Yu）；徐鑫（Xin Xu）；汪志立（Zhili Wang）</div>
+<div class="chapter-authors">於俊；徐鑫；汪志立</div>
 
 ## 摘要
 P08 聚焦把分散的数据工程动作组织成可治理、可追踪、可回滚、可评估的 DataOps 平台能力。章节重点不在单个控制台页面，而在对象建模、版本治理、实验追踪、血缘回滚和可观测闭环之间的系统化关系。

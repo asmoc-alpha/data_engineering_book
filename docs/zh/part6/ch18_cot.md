@@ -1,6 +1,6 @@
 # 第18章：思维链与推理数据工程
 
-<div class="chapter-authors">於俊（Jun Yu）；张然（Ran Zhang）；刘中一（Zhongyi Liu）</div>
+<div class="chapter-authors">於俊；张然；刘中一</div>
 
 ## 章前导读
 

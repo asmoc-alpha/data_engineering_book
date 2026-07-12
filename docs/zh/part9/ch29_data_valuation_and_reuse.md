@@ -1,6 +1,6 @@
 # 第29章：数据资产价值评估与复用机制
 
-<div class="chapter-authors">刘中一（Zhongyi Liu）；杜文卓（Wenzhuo Du）；於俊（Jun Yu）</div>
+<div class="chapter-authors">刘中一；杜文卓；於俊</div>
 
 ## 摘要
 

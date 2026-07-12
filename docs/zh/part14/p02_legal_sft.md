@@ -1,6 +1,6 @@
 # 项目二：垂直领域专家监督微调（法律）
 
-<div class="chapter-authors">徐鑫（Xin Xu）；张然（Ran Zhang）；於俊（Jun Yu）</div>
+<div class="chapter-authors">徐鑫；张然；於俊</div>
 
 ## 摘要
 P02 聚焦把法规文本、制度说明和法律任务需求组织成一条可训练、可质检、可扩展的垂直领域 SFT 数据生产线。章节重点不在单次问答生成，而在从种子知识到监督资产的稳定转化过程。

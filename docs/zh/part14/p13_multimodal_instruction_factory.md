@@ -1,6 +1,6 @@
 # 项目十三：Qwen-VL 多模态指令工厂
 
-<div class="chapter-authors">於俊（Jun Yu）；王柯（Ke Wang）；杜文卓（Wenzhuo Du）</div>
+<div class="chapter-authors">於俊；王柯；杜文卓</div>
 
 ## 摘要
 

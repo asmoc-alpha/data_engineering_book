@@ -1,6 +1,6 @@
 # 第46章：推理数据飞轮：R1 与 QwQ
 
-<div class="chapter-authors">徐鑫（Xin Xu）；Shengping Liu；于璠</div>
+<div class="chapter-authors">徐鑫；刘升平；于璠</div>
 
 ## 摘要
 上一章讨论了后训练阶段的 SFT、偏好对齐、奖励模型和 RLVR 数据接口。本章继续向前推进，聚焦 2025 年以来开源社区最重要的一类变化：推理模型不再只依赖人工写好的长思维链样本，而是开始通过强化学习（Reinforcement Learning, RL）和可验证奖励，主动扩大自己的推理轨迹空间。

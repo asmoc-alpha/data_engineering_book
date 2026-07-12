@@ -1,6 +1,6 @@
 # 项目九：隐私保护数据流水线
 
-<div class="chapter-authors">刘中一（Zhongyi Liu）；徐鑫（Xin Xu）；穆冠霖（Guanlin Mu）</div>
+<div class="chapter-authors">刘中一；徐鑫；穆冠霖</div>
 
 ## 摘要
 P09 聚焦敏感数据进入训练、分析与共享链路之前的治理过程。章节重点不在单点脱敏技巧，而在把控制边界、敏感记录处理、运营响应和验收机制组织成一条完整的隐私保护数据流水线。

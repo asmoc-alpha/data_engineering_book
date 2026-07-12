@@ -1,6 +1,6 @@
 # 第31章：数据工程 Agent 的架构与任务边界
 
-<div class="chapter-authors">於俊（Jun Yu）；汪志立（Zhili Wang）；刘中一（Zhongyi Liu）</div>
+<div class="chapter-authors">於俊；汪志立；刘中一</div>
 
 ---
 

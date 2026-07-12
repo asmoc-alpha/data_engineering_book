@@ -1,6 +1,6 @@
 # 第35章：Agent 安全与人机协同
 
-<div class="chapter-authors">骆阳（Yang Luo）；汪志立（Zhili Wang）；於俊（Jun Yu）</div>
+<div class="chapter-authors">骆阳；汪志立；於俊</div>
 
 ---
 
