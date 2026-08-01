@@ -2,16 +2,8 @@
 
 ## 全书目录概览
 
-本书当前中文出版稿采用 2026 年冻结结构，正文覆盖 48 章、15 个端到端项目与 8 个附录（A–H）。为降低跨篇阅读门槛，本版在前置部分新增在线资源入口和统一的缩写表，并为每一篇补充了分册目录页。
+本书当前中文出版稿采用 2026 年冻结结构，正文覆盖 48 章、15 个端到端项目与 8 个附录（A–H）。为降低跨篇阅读门槛，本版为每一篇补充了分册目录页，并保留统一的缩写表。
 
-- [大模型数据工程](title_page.md)
-- [作者机构与联系方式](author_affiliations.md)
-- [在线资源与讨论入口](online_resources.md)
-- [序言](preface.md)
-- [致谢](acknowledgments.md)
-- [利益冲突声明](competing_interests.md)
-- [伦理审批](ethics_approval.md)
-- [贡献者](contributors.md)
 - [缩写表](abbreviations.md)
 - [第一篇：总论与基础设施](part1/index.md)
 - [第二篇：文本预训练数据工程](part2/index.md)

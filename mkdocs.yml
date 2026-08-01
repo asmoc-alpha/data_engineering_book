@@ -12,6 +12,22 @@ exclude_docs: |
   ja/superpowers/**
   **/translation-status.md
   **/translation-style-guide.md
+  zh/title_page.md
+  zh/author_affiliations.md
+  zh/online_resources.md
+  zh/preface.md
+  zh/acknowledgments.md
+  zh/competing_interests.md
+  zh/ethics_approval.md
+  zh/contributors.md
+  en/title_page.md
+  en/author_affiliations.md
+  en/online_resources.md
+  en/preface.md
+  en/acknowledgments.md
+  en/competing_interests.md
+  en/ethics_approval.md
+  en/contributors.md
 
 # 仓库信息 (右上角显示 GitHub 图标)
 repo_name: GitHub
@@ -72,15 +88,7 @@ plugins:
           build: true
           site_name: 大模型数据工程：架构、算法及项目实战
           nav:
-            - 大模型数据工程: title_page.md
-            - 作者机构与联系方式: author_affiliations.md
-            - 在线资源与讨论入口: online_resources.md
-            - 序言: preface.md
-            - 致谢: acknowledgments.md
-            - 利益冲突声明: competing_interests.md
-            - 伦理审批: ethics_approval.md
-            - 全书总目录: index.md
-            - 贡献者: contributors.md
+            - 大模型数据工程: index.md
             - 缩写表: abbreviations.md
             - 第一篇：总论与基础设施:
                 - 本篇目录: part1/index.md
@@ -204,15 +212,7 @@ plugins:
                   icon: material/weather-night
                   name: Switch to light mode
           nav:
-            - Data Engineering for Large Foundation Models: title_page.md
-            - Author Affiliations and Contact Details: author_affiliations.md
-            - Online Resources and Community: online_resources.md
-            - Preface: preface.md
-            - Acknowledgments: acknowledgments.md
-            - Declaration of Competing Interests: competing_interests.md
-            - Ethics Approval: ethics_approval.md
-            - Table of Contents: index.md
-            - Contributors: contributors.md
+            - Data Engineering for Large Foundation Models: index.md
             - Abbreviations: abbreviations.md
             - "Part I: Overview and Infrastructure":
                 - "Part Overview": part1/index.md

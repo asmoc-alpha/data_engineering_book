@@ -2,16 +2,8 @@
 
 ## Full Table of Contents Overview
 
-The current Chinese mainline uses the 2026 Springer-size publication structure. The main text covers 48 chapters, 15 end-to-end projects, and 8 appendices (A-H). To reduce friction when reading across parts, this edition adds online resource entry points, a unified abbreviation table in the front matter, and a contents page for each part.
+The current Chinese mainline uses the 2026 Springer-size publication structure. The main text covers 48 chapters, 15 end-to-end projects, and 8 appendices (A-H). To reduce friction when reading across parts, this edition keeps a unified abbreviation table and a contents page for each part.
 
-- [Data Engineering for Large Foundation Models](title_page.md)
-- [Author Affiliations and Contact Details](author_affiliations.md)
-- [Online Resources and Community](online_resources.md)
-- [Preface](preface.md)
-- [Acknowledgments](acknowledgments.md)
-- [Declaration of Competing Interests](competing_interests.md)
-- [Ethics Approval](ethics_approval.md)
-- [Contributors](contributors.md)
 - [Abbreviations](abbreviations.md)
 - [Part I: Overview and Infrastructure](part1/index.md)
 - [Part II: Text Pre-training Data Engineering](part2/index.md)
