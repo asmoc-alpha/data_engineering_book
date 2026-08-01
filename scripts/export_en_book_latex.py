@@ -54,6 +54,17 @@ PIL_FORMAT_SUFFIXES = {
     "JPEG": ".jpg",
     "PNG": ".png",
 }
+PUBLISHING_FRONT_MATTER_PATHS = [
+    "title_page.md",
+    "author_affiliations.md",
+    "online_resources.md",
+    "preface.md",
+    "acknowledgments.md",
+    "competing_interests.md",
+    "ethics_approval.md",
+    "contributors.md",
+    "abbreviations.md",
+]
 
 AUTHOR_PREFIXES = {
     "part1/ch01_": "Jun Yu; Changwen Chen; Ke Wang",
@@ -389,6 +400,17 @@ def flatten_nav(nodes: list[Any], level: int = 1) -> list[NavItem]:
                 items.append(NavItem(str(title), value, level))
             elif isinstance(value, list):
                 items.extend(flatten_nav(value, level + 1))
+    return items
+
+
+def publishing_items_from_nav(nodes: list[Any]) -> list[NavItem]:
+    items = flatten_nav(nodes)
+    seen = {item.path for item in items}
+    for path in PUBLISHING_FRONT_MATTER_PATHS:
+        if path not in seen:
+            title = markdown_h1_title(path) or Path(path).stem.replace("_", " ").title()
+            items.append(NavItem(title, path, 1))
+            seen.add(path)
     return items
 
 
@@ -1385,7 +1407,7 @@ def main() -> int:
     args = parser.parse_args()
 
     config = yaml.safe_load(MKDOCS.read_text(encoding="utf-8"))
-    items = prepare_latex_items(flatten_nav(find_en_nav(config)))
+    items = prepare_latex_items(publishing_items_from_nav(find_en_nav(config)))
     if args.only:
         needles = tuple(args.only)
         items = [item for item in items if any(needle in item.path or needle in item.title for needle in needles)]

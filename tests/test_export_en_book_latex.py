@@ -29,7 +29,7 @@ class ExportEnglishBookLatexTest(unittest.TestCase):
         exporter = load_exporter()
         config = yaml.safe_load((ROOT / "mkdocs.yml").read_text(encoding="utf-8"))
 
-        items = exporter.prepare_latex_items(exporter.flatten_nav(exporter.find_en_nav(config)))
+        items = exporter.prepare_latex_items(exporter.publishing_items_from_nav(exporter.find_en_nav(config)))
         paths = [item.path for item in items]
 
         self.assertEqual(exporter.OUT_TEX.name, "data_engineering_book_en_16k_latex.tex")

@@ -74,7 +74,7 @@ class ExportEnglishBookPdfTest(unittest.TestCase):
         exporter = load_exporter()
         config = yaml.safe_load((ROOT / "mkdocs.yml").read_text(encoding="utf-8"))
 
-        items = exporter.flatten_nav(exporter.find_en_nav(config))
+        items = exporter.publishing_items_from_nav(exporter.find_en_nav(config))
         paths = [item.path for item in items]
 
         self.assertEqual(exporter.OUT_HTML.name, "data_engineering_book_en_16k_compact.html")
@@ -88,7 +88,7 @@ class ExportEnglishBookPdfTest(unittest.TestCase):
     def test_english_exporter_writes_english_html_shell(self):
         exporter = load_exporter()
         config = yaml.safe_load((ROOT / "mkdocs.yml").read_text(encoding="utf-8"))
-        items = exporter.flatten_nav(exporter.find_en_nav(config))[:1]
+        items = exporter.publishing_items_from_nav(exporter.find_en_nav(config))[:1]
 
         html_doc, stats = exporter.build_book_html(items, include_cover_toc=False)
 
@@ -137,7 +137,7 @@ class ExportEnglishBookPdfTest(unittest.TestCase):
     def test_submission_pdfs_are_limited_to_actual_manuscript_units(self):
         exporter = load_exporter()
         config = yaml.safe_load((ROOT / "mkdocs.yml").read_text(encoding="utf-8"))
-        items = exporter.flatten_nav(exporter.find_en_nav(config))
+        items = exporter.publishing_items_from_nav(exporter.find_en_nav(config))
 
         paths = [item.path for item in exporter.submission_pdf_items(items)]
 
@@ -153,7 +153,7 @@ class ExportEnglishBookPdfTest(unittest.TestCase):
     def test_formal_pdf_front_matter_excludes_nonstandard_reading_guide(self):
         exporter = load_exporter()
         config = yaml.safe_load((ROOT / "mkdocs.yml").read_text(encoding="utf-8"))
-        items = exporter.flatten_nav(exporter.find_en_nav(config))
+        items = exporter.publishing_items_from_nav(exporter.find_en_nav(config))
 
         paths = [item.path for item in exporter.prepare_pdf_items(items)]
 
@@ -209,7 +209,7 @@ class ExportEnglishBookPdfTest(unittest.TestCase):
     def test_springer_reference_pdf_sets_include_front_and_back_matter(self):
         exporter = load_exporter()
         config = yaml.safe_load((ROOT / "mkdocs.yml").read_text(encoding="utf-8"))
-        items = exporter.flatten_nav(exporter.find_en_nav(config))
+        items = exporter.publishing_items_from_nav(exporter.find_en_nav(config))
 
         front_paths = [item.path for item in exporter.front_matter_pdf_items(items)]
         back_paths = [item.path for item in exporter.back_matter_pdf_items(items)]
@@ -226,7 +226,7 @@ class ExportEnglishBookPdfTest(unittest.TestCase):
     def test_submission_front_matter_uses_formal_contents_pdf(self):
         exporter = load_exporter()
         config = yaml.safe_load((ROOT / "mkdocs.yml").read_text(encoding="utf-8"))
-        items = exporter.flatten_nav(exporter.find_en_nav(config))
+        items = exporter.publishing_items_from_nav(exporter.find_en_nav(config))
 
         with tempfile.TemporaryDirectory(dir=ROOT / "output") as tmp:
             tmp_path = Path(tmp)
@@ -479,7 +479,7 @@ class ExportEnglishBookLatexTest(unittest.TestCase):
     def test_submission_latex_items_exclude_web_only_part_overviews(self):
         exporter = load_latex_exporter()
         config = yaml.safe_load((ROOT / "mkdocs.yml").read_text(encoding="utf-8"))
-        items = exporter.prepare_latex_items(exporter.flatten_nav(exporter.find_en_nav(config)))
+        items = exporter.prepare_latex_items(exporter.publishing_items_from_nav(exporter.find_en_nav(config)))
 
         paths = [item.path for item in exporter.submission_latex_items(items)]
 
@@ -494,7 +494,7 @@ class ExportEnglishBookLatexTest(unittest.TestCase):
     def test_split_export_writes_one_latex_file_per_submission_unit(self):
         exporter = load_latex_exporter()
         config = yaml.safe_load((ROOT / "mkdocs.yml").read_text(encoding="utf-8"))
-        items = exporter.prepare_latex_items(exporter.flatten_nav(exporter.find_en_nav(config)))
+        items = exporter.prepare_latex_items(exporter.publishing_items_from_nav(exporter.find_en_nav(config)))
 
         with tempfile.TemporaryDirectory(dir=ROOT / "output") as tmp:
             tmp_path = Path(tmp)
